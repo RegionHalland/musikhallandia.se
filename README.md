@@ -1,4 +1,4 @@
-# Instruktioner för vuxhalland.se
+# Instruktioner för musikhallandia.se
 
 
 ## Hämta hem webbplatsen via Git till den folder på servern där webbplatsen skall ligga
