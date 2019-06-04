@@ -4,7 +4,7 @@
 ## Hämta hem webbplatsen via Git till den folder på servern där webbplatsen skall ligga
 
 ```sh
-git clone https://github.com/RegionHalland/vuxhalland.se.git .
+git clone https://github.com/RegionHalland/musikhallandia.se.git
 ```
 
 ## Checka ut en release på servern
