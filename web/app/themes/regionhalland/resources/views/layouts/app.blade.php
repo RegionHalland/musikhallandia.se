@@ -5,7 +5,7 @@
         @include('partials.jump-to-content')
         @include('partials.part-of-region-halland')
         @include('partials.cookie-notice')
-        @include('partials.header')
+        @include('partials.nav-site')
 
         @yield('content')
         @include('partials.footer')
