@@ -1,8 +1,4 @@
 @if(get_the_post_thumbnail_url())
-    <div class="center rh-hero">
-        <img class="rh-image-hero" src="{{ get_the_post_thumbnail_url() }}" alt="">
-        <div class="rh-caption-hero">
-            {{ $post->post_title }}
-        </div>
+    <div style="min-height: 400px; max-height: 500px; background-image: url('{{ get_the_post_thumbnail_url() }}');  height: 50%; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;">
     </div>
 @endif
