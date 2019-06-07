@@ -11,6 +11,10 @@
   padding-bottom: 0.5ex;
 }
 
+.rh-article {
+    line-height: 1.4;
+}
+
 .rh-article img {
   max-width: 100%;
   height: auto;

@@ -10,7 +10,7 @@
     </div>
 
     {{-- Huvudinnehåll --}}
-    <div class="center px3" style="max-width: 1440px;">
+    <div class="center px3 rh-article" style="max-width: 1440px;">
         <main>
             Här hamnar själva sidinnehållet
         </main>
