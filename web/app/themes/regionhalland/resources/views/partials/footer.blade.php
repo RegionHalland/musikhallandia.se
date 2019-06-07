@@ -1,6 +1,6 @@
 <footer id="footer-top-placeholder" style="background-color: #EFE7DA; line-height: 1.4;">
     <div class="clearfix center px3 pb3" style="max-width: 1440px;">
-        <div class="left-align col col-12 sm-col-12 md-col-4 lg-col-4">
+        <div class="left-align col col-12 sm-col-12 md-col-12 lg-col-4">
             <img style="" src="{!! env('WP_HOME') !!}/include/img/MH_Greyscale.png" />
             <p style="max-width:15em;">
                 Musik Hallandia är en musikinstitution, helägd av Region Halland.
@@ -17,7 +17,7 @@
 
         </div>
 
-        <div class="left-align col col-12 sm-col-12 md-col-2 lg-col-2">
+        <div class="left-align col col-12 sm-col-4 md-col-4 lg-col-2">
             <p class="h2 pt3">Sidor</p>
             @php($first_level_pages = get_region_halland_tree_first_level())
             @if(isset($first_level_pages) && !empty($first_level_pages))
@@ -36,7 +36,7 @@
                 </ul>
             @endif
         </div>
-        <div class="left-align col col-12 sm-col-12 md-col-3 lg-col-3">
+        <div class="left-align col col-12 sm-col-4 md-col-4 lg-col-3">
             <p class="h2 pt3">Om oss</p>
             <ul>
                 <li><a href="/om-oss">Om oss</a></li>
@@ -48,7 +48,7 @@
             </ul>
         </div>
 
-        <div class="left-align col col-12 sm-col-12 md-col-3 lg-col-3">
+        <div class="left-align col col-12 sm-col-4 md-col-4 lg-col-3">
             <p class="h2 pt3">
                 Kontakt
             </p>
