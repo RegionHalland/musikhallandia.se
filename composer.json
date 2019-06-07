@@ -80,8 +80,20 @@
       "url": "https://github.com/RegionHalland/region-halland-acf-page-evenemang.git"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/RegionHalland/region-halland-acf-pro-5-6-8.git"
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.8.1",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+        },
+        "require": {
+          "philippbaschke/acf-pro-installer": "^1.0",
+          "composer/installers": "^1.0"
+        }
+      }
     }
   ],
   "require": {
@@ -107,8 +119,7 @@
     "regionhalland/region-halland-acf-page-menu-text": "1.0.0",
     "regionhalland/region-halland-acf-page-evenemang": "1.0.0",
     "regionhalland/region-halland-acf-page-ingress": "1.1.2",
-
-    "regionhalland/region-halland-acf-pro-5-6-8": "5.6.8"
+    "advanced-custom-fields/advanced-custom-fields-pro": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
