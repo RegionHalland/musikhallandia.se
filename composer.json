@@ -73,6 +73,10 @@
     },
     {
       "type": "vcs",
+      "url": "https://github.com/RegionHalland/region-halland-acf-page-ingress.git"
+    },
+    {
+      "type": "vcs",
       "url": "https://github.com/RegionHalland/region-halland-acf-pro-5-6-8.git"
     }
   ],
@@ -97,6 +101,7 @@
     "regionhalland/region-halland-page-children": "1.1.0",
     "regionhalland/region-halland-parent-page": "1.0.0",
     "regionhalland/region-halland-acf-page-menu-text": "1.0.0",
+    "regionhalland/region-halland-acf-page-ingress": "1.1.2",
     "regionhalland/region-halland-acf-pro-5-6-8": "5.6.8"
   },
   "require-dev": {
