@@ -15,8 +15,8 @@
             Här hamnar själva sidinnehållet
         </main>
     </div>
-    
 
+    @include('partials.newsletter')
 
 @endsection
 
