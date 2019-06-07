@@ -107,6 +107,8 @@
     "wpackagist-plugin/wp-nested-pages": "2.0.4",
     "wpackagist-plugin/admin-menu-editor": "1.8.5",
     "wpackagist-plugin/wp-migrate-db": "1.0.10",
+    "wpackagist-plugin/mce-table-buttons":"3.3",
+    "wpackagist-plugin/classic-editor":"1.5",
     "regionhalland/region-halland-acf-add-theme-subpage": "1.0.0",
     "regionhalland/region-halland-acf-cookie-notice": "1.0.0",
     "regionhalland/region-halland-main-post-settings-vuxhalland": "1.0.1",
