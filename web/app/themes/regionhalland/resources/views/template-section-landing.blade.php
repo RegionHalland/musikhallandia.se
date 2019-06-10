@@ -7,17 +7,40 @@
 @extends('layouts.app')
 
 @section('content')
-    @php($myParentPage = get_region_halland_parent_page())
-    <div class="rh-xpad-B py2 mx-auto" style="max-width:1440px;">
-        @if($myParentPage['has_back'] == 1)
-            <a href="{{$myParentPage['url']}}" class="rh-round-button--vuxhalland rh-round-button icon-arrow-left"></a>
-            <a href="{{$myParentPage['url']}}" class="pl1 rh-link--navigation">{{$myParentPage['post_title']}}</a>
 
-        @else
-            <a href="/" class="rh-round-button--vuxhalland rh-round-button icon-arrow-left"></a>
-            <a href="/" class="pl1 rh-link--navigation">Startsidan</a>
-        @endif
+    @include('partials.hero')
+
+    <div class="rh-xpad-A pt3 pb3" style="background: #FBF9F4">
+        <div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
+            <main>
+                <div class="clearfix">
+
+                    {{-- Content --}}
+                    <div class="col col-12 md-col-9 rh-article">
+                        @while(have_posts()) @php(the_post())
+                        <h1>{{ $post->post_title }}</h1>
+
+                        <strong>
+                            {{ get_region_halland_acf_page_evenemang_ingress() }}
+                        </strong>
+
+                        <p>
+                            {{ the_content() }}
+                        </p>
+                        @endwhile
+                    </div>
+                </div>
+
+                {{-- Blurbs på nedre delen av sidan --}}
+                <div style="background: #EFE7DA;">
+                    TODO: HÄR SKALL BLURBAR LIGGA OM DET FINNS NÅGRA PÅ SIDAN
+                </div>
+            </main>
+
+
+
+        </div>
+
     </div>
-    @include('partials.new_blurbs-list')
-    @include('partials.section-navigation')
+    @include('partials.newsletter')
 @endsection
