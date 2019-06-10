@@ -12,25 +12,20 @@
     {{-- Huvudinnehåll --}}
     <div class="center px3 rh-article" style="max-width: 1440px;">
         <main>
-            <h1>Aktuella evenemang</h1>
-            Här hamnar själva sidinnehållet
-            <div class="clearfix">
-                <div class="col col-12 md-col-4 px1">
-                    <div style="height:200px; background: #777777;">BILD HÄR</div>
-                    <strong>Arrangemangets namn</strong><br>
-                    Information om arrangemanget
+            <div style="display:flex; align-content: center;"><h1>Aktuella evenemang</h1></div>
+            @php($myData = get_region_halland_acf_page_evenemang_kommande_items())
+            @if(isset($myData))
+                <div class="clearfix">
+
+                @foreach ($myData as $data)
+                    <div class="col col-12 md-col-4 px1">
+                        <div style="background: #777777;">{!! $data->image !!}<br></div>
+                        <strong><a href="{{ $data->url }}">{{ $data->post_title }}</a></strong><br>
+                        {{ $data->ingress }}
+                    </div>
+                @endforeach
                 </div>
-                <div class="col col-12 md-col-4 px1">
-                    <div style="height:200px; background: #777777;">BILD HÄR</div>
-                    <strong>Arrangemangets namn</strong><br>
-                    Information om arrangemanget
-                </div>
-                <div class="col col-12 md-col-4 px1">
-                    <div style="height:200px; background: #777777;">BILD HÄR</div>
-                    <strong>Arrangemangets namn</strong><br>
-                    Information om arrangemanget
-                </div>
-            </div>
+            @endif
         </main>
     </div>
 
