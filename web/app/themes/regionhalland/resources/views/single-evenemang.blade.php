@@ -21,7 +21,7 @@
                             </p>
                         @endwhile
                     </div>
-                    <div class="pl3 col col-12 md-col-3" >
+                    <div class="rh-xpad--left col col-12 md-col-3" >
                         <div class="p2 " style="background: #EFE7DA;">
                             <div class="pb3 mt2" style="border-bottom: 1px solid black;">
                                 <h2>Information</h2><br>
