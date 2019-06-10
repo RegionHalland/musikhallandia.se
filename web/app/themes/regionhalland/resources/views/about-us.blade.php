@@ -42,8 +42,6 @@
 
     @endwhile
 
-
-
     @include('partials.newsletter')
 
 @endsection
