@@ -9,16 +9,16 @@
 	<link rel="manifest" href="{!! env('WP_HOME') !!}/include/favicons/site.webmanifest" />
 	<link rel="mask-icon" href="{!! env('WP_HOME') !!}/include/favicons/safari-pinned-tab.svg" color="#6ba3cb" />
 	<link rel="shortcut icon" href="{!! env('WP_HOME') !!}/include/favicons/favicon.ico" />
-	<meta name="apple-mobile-web-app-title" content="Region Halland" />
-	<meta name="application-name" content="Region Halland" />
+	<meta name="apple-mobile-web-app-title" content="Musik Hallandia" />
+	<meta name="application-name" content="Musik Hallandia" />
 	<meta name="msapplication-TileColor" content="#ffffff" />
 	<meta name="msapplication-config" href="{!! env('WP_HOME') !!}/include/favicons/browserconfig.xml" />
 	<meta name="theme-color" content="#ffffff" />
 	@php($myPostType = get_post_type())
 	@if($myPostType == 'page')
-		<title>{{ $post->post_title }} - Vuxhalland</title>
+		<title>{{ $post->post_title }} - Musik Hallandia</title>
 	@else
-		<title>{{ $myPostType }} - Vuxhalland</title>
+		<title>{{ $myPostType }} - Musik Hallandia</title>
 	@endif
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/alicdn/font_o5hd5vvqpoqiwwmi_190529.css">
 	<link href="{!! env('WP_HOME') !!}/styleguide5.0.0/css/components.css" rel="stylesheet"/>
