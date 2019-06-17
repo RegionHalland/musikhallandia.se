@@ -20,7 +20,7 @@
                     @foreach ($myData as $data)
                         <div class="col col-12 md-col-4 px1">
                             <div style="background: #777777;">{!! $data->image !!}<br></div>
-                            <strong><a href="{{ $data->url }}">{{ $data->post_title }}</a></strong><br>
+                            <strong><a class="rh-link--navigation" href="{{ $data->url }}">{{ $data->post_title }}</a></strong><br>
                             {{ $data->ingress }}
                         </div>
                     @endforeach
