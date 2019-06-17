@@ -8,7 +8,8 @@
                 </div>
         </div>
         <div class="col col-12 sm-col-6">
-            <input class="pl2" type="text" placeholder="Din e-postadress" style="border-radius: 0.5em; height: 3em; width: 25em;"><a href="" class="rh-round-button">Prenumerera</a>
+            <input class="pl2" type="text" placeholder="Din e-postadress" style="font-size: 1em; border-radius: 0.5em; height: 3em; width: 22em;">
+            <a href="" class="ml3 rh-round-button" style="height: 3em; padding-left:1em; padding-right: 1em; border-radius: 3em;">Prenumerera</a>
         </div>
 
     </div>
