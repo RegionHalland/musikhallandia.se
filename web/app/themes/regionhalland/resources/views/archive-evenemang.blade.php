@@ -3,9 +3,9 @@
     @include('partials.hero')
     {{-- Ingress-container --}}
     <div style="background:#EFE7DA;">
-        <div class="center p3" style="max-width:50em; line-height:1.4;">
+        <div class="center p3" style="max-width:40em; text-align: center; line-height:1.4;">
             Musik Hallandia möjliggör ett brett utbud av musikupplevelser - allt från festivaler och konserter till musikprogram och aktiviteter för barn och unga. Vi har något för alla, helt enkelt. Vill du veta mer? Hör av dig!
-            <p><a href="">Läs mer om oss</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;"></span></p>
+            <p><a class="rh-link--navigation" href=""><strong>Läs mer om oss</strong></a><span class="ml1 icon-arrow-right" style="font-family: feather !important;"></span></p>
         </div>
     </div>
 
