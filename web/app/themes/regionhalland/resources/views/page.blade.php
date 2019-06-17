@@ -1,88 +1,58 @@
+{{--
+
+    Template Name: Sektionssida
+
+--}}
+
 @extends('layouts.app')
 
-@section('content') 	
+@section('content')
 
-	<div class="rh-xpad-A pt3 pb3 clearfix center" style="max-width: 1440px;background: #FBFAF9">
-		<div class="rh-xpad-B pt3 pb3" style="background: white;">
-			<main>
-
-				{{-- Back button component: --}}
-				@php($myParentPage = get_region_halland_parent_page())
-					<div class="pb3">
-						@if($myParentPage['has_back'] == 1)
-							<a href="{{$myParentPage['url']}}" class="rh-round-button--vuxhalland rh-round-button icon-arrow-left"></a>
-							<a href="{{$myParentPage['url']}}" class="pl1 rh-link--navigation">{{$myParentPage['post_title']}}</a>
-
-						@else
-							<a href="/" class="rh-round-button--vuxhalland rh-round-button icon-arrow-left"></a>
-							<a href="/" class="pl1 rh-link--navigation">Startsidan</a>
-						@endif
-					</div>
-
+	@include('partials.hero')
+	@include('partials.nav-siblings')
+	<main>
+		<div class="rh-xpad-A pt3 pb3" style="background: #FBF9F4">
+			<div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
 				<div class="clearfix">
+					{{-- Content --}}
 					<div class="col col-12 md-col-9 rh-article">
 						@while(have_posts()) @php(the_post())
-						<h1>{{ $post->post_title }}</h1><br><br>
-						@if(function_exists('get_region_halland_prepare_the_content'))
-							@php(get_region_halland_prepare_the_content())
-						@endif
-						{{ the_content() }}
+						<h1>{{ $post->post_title }}</h1>
+
+						<strong>
+							{{ get_region_halland_acf_page_ingress() }}
+						</strong>
+
+						<p>
+							{{ the_content() }}
+						</p>
 						@endwhile
 					</div>
-					<div class="pl4 col col-12 md-col-3">
-					    Högerspalt
-					</div>
-				</div>
-
-			</main>
-		</div>
-
-
-
-	</div>
-
-	{{--
-	<!-- ************ -->
-	<!-- Page content -->
-	<!-- ************ -->
-	<div class="background-white">
-		<div class="background-white">
-			<div class="container mx-auto p4">
-				<div class="m2 flex flex-wrap">
-
-					<div class="col-12 lg-col-3">
-
-						@include('partials.nav-sidebars')
-
-						<div class="pt2">&nbsp;</div>
-
-						@include('partials.content-nav')
-
-					</div>
-
-					<!-- ************ -->
-					<!-- Page content -->
-					<!-- ************ -->
-					<div class="col-12 lg-col-9">
-						<main class="ml4">
-
-							<div>
-								<h1>{{ the_title() }}</h1>
-							</div>
-
-							<div id="main">
-								@while(have_posts()) @php(the_post())
-									@include('partials.article')
-									@include('partials.entry-meta')
-								@endwhile
-							</div>
-
-						</main>
-					</div>
-
 				</div>
 			</div>
 		</div>
-	</div> --}}
 
+		{{-- Blurbs på nedre delen av sidan --}}
+		<div class="rh-xpad-A pt3 pb3" style="background: #EFE7DA;">
+			<div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
+				@php($myBlurbs = get_region_halland_acf_main_post_page_links_blurbs())
+				@if(isset($myBlurbs))
+					<ul>
+						@foreach ($myBlurbs as $blurbs)
+							<li class="pb4">
+								<div class="clearfix">
+									<div class="mr3" style="float:left;">
+										{!! $blurbs['image'] !!}
+									</div>
+									<h2>{{ $blurbs['post_title'] }}</h2>
+									{{ $blurbs['post_content'] }}
+								</div>
+							</li>
+						@endforeach
+					</ul>
+				@endif
+			</div>
+		</div>
+	</main>
+	@include('partials.newsletter')
 @endsection
