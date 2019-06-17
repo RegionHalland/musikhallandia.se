@@ -1,6 +1,6 @@
 {{--
 
-    Template Name: Sektionssida
+    Template Name: Sektionssida page
 
 --}}
 
