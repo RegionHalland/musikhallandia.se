@@ -41,12 +41,14 @@
                                 <li class="col col-12 sm-col-12 md-col-6 lg-col-4 pb4">
                                     <div class="clearfix">
                                         @if($data['contact_has_image'])
-                                            <div class="mr3" style="text-align:center; overflow: hidden;">
+                                            <div class="mr3" style="text-align:center; overflow: hidden; position: relative;">
                                                 <img src="{{ $data['contact_image_url'] }}" width="{{ $data['contact_image_width'] }}" height="{{ $data['contact_image_height'] }}">
+                                                <span style="position: absolute; bottom: 0; left: 0; border-left: 30px solid #FA3CB4; border-top: 80px solid transparent;"></span>
+                                                <span style="position: absolute; top: 0; right: 0; border-right: 30px solid #FA3CB4; border-bottom: 80px solid transparent;"></span>
                                             </div>
                                         @endif
                                         <h2>{!! $data['contact_name'] !!}</h2>
-
+                                            {!! $data['post_content'] !!}
                                         <p>{{ $data['contact_epost'] }}</p>
                                     </div>
                             @endforeach
