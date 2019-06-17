@@ -6,13 +6,13 @@
                 Musik Hallandia är en musikinstitution, helägd av Region Halland.
             </p>
             <p>
-                <a href="">Facebook</a>
+                <a class="rh-link--navigation" href="">Facebook</a>
             </p>
             <p>
-                <a href="">Instagram</a>
+                <a class="rh-link--navigation" href="">Instagram</a>
             </p>
             <p>
-                <a href="">E-post</a>
+                <a class="rh-link--navigation" href="">E-post</a>
             </p>
 
         </div>
@@ -25,11 +25,11 @@
                     @foreach($first_level_pages as $first_level_page)
                         @if($first_level_page->active === true)
                             <li>
-                                <a class="active" href="{{ $first_level_page->url }}">{{ $first_level_page->post_title }}</a>
+                                <a class="active rh-link--navigation" href="{{ $first_level_page->url }}">{{ $first_level_page->post_title }}</a>
                             </li>
                         @else
                             <li>
-                                <a href="{{ $first_level_page->url }}">{{ $first_level_page->post_title }}</a>
+                                <a class="rh-link--navigation" href="{{ $first_level_page->url }}">{{ $first_level_page->post_title }}</a>
                             </li>
                         @endif
                     @endforeach
@@ -39,12 +39,12 @@
         <div class="left-align col col-12 sm-col-4 md-col-4 lg-col-3">
             <p class="h2 pt3">Om oss</p>
             <ul>
-                <li><a href="/om-oss">Om oss</a></li>
-                <li><a href="/">Vår vision</a></li>
-                <li><a href="/">Vårt uppdrag</a></li>
-                <li><a href="/">Lediga jobb</a></li>
-                <li><a href="/">Kontakt</a></li>
-                <li><a href="/">Press & Media</a></li>
+                <li><a class="rh-link--navigation" href="/om-oss">Om oss</a></li>
+                <li><a class="rh-link--navigation" href="/">Vår vision</a></li>
+                <li><a class="rh-link--navigation" href="/">Vårt uppdrag</a></li>
+                <li><a class="rh-link--navigation" href="/">Lediga jobb</a></li>
+                <li><a class="rh-link--navigation" href="/">Kontakt</a></li>
+                <li><a class="rh-link--navigation" href="/">Press & Media</a></li>
             </ul>
         </div>
 
@@ -69,7 +69,7 @@
                 <strong>Fax:</strong> 035 - 13 54 44
             </p>
             <p>
-                <a href="">Kontakta personalen</a>
+                <a class="rh-link--navigation" href="">Kontakta personalen</a>
             </p>
 
         </div>
