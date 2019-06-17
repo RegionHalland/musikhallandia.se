@@ -31,7 +31,31 @@
 
                         @endwhile
                     </div>
+
+                    {{-- Kontaktkorten från nya pluginet --}}
+                    @php($myData = get_region_halland_acf_main_post_page_contact_cards())
+                    @if(isset($myData))
+                        <div class="col col-12">
+                            <ul>
+                            @foreach ($myData as $data)
+                                <li class="col col-12 sm-col-12 md-col-6 lg-col-4 pb4">
+                                    <div class="clearfix">
+                                        @if($data['contact_has_image'])
+                                            <div class="mr3" style="text-align:center; overflow: hidden;">
+                                                <img src="{{ $data['contact_image_url'] }}" width="{{ $data['contact_image_width'] }}" height="{{ $data['contact_image_height'] }}">
+                                            </div>
+                                        @endif
+                                        <h2>{!! $data['contact_name'] !!}</h2>
+
+                                        <p>{{ $data['contact_epost'] }}</p>
+                                    </div>
+                            @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
                     {{-- Kontaktkorten --}}
+                    {{--
                     @php($myBlurbs = get_region_halland_acf_main_post_page_links_blurbs())
                     @if(isset($myBlurbs))
                         <div class="col col-12">
@@ -50,6 +74,8 @@
                             </ul>
                         </div>
                     @endif
+                    --}}
+
                 </div>
             </div>
         </div>
