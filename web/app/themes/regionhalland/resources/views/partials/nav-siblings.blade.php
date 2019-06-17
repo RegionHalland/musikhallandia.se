@@ -3,13 +3,13 @@
         <ul class="" style="display: inline;">
 
                 <li class="mx1" style="display:inline;">
-                    <a href="/">Navigationsval 1</a>
+                    <a class="rh-link--navigation" href="/">Navigationsval 1</a>
                 </li>
                 <li class="mx1" style="display:inline;">
-                    <a href="/">Navigationsval 2</a>
+                    <a class="rh-link--navigation" href="/">Navigationsval 2</a>
                 </li>
                 <li class="mx1" style="display:inline;">
-                    <a href="/">Navigationsval 3</a>
+                    <a class="rh-link--navigation" href="/">Navigationsval 3</a>
                 </li>
 
 

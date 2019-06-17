@@ -6,7 +6,7 @@
                 <ul class="" style="display: inline;">
                     @foreach ($myPages as $myChilds)
                         <li class="mx1" style="display:inline;">
-                            <a href="{{ $myChilds->url }}">{{ $myChilds->post_title }}</a>
+                            <a class="rh-link--navigation" href="{{ $myChilds->url }}">{{ $myChilds->post_title }}</a>
                         </li>
                     @endforeach
                 </ul>

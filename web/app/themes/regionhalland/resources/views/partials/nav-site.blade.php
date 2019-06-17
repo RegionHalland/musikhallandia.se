@@ -5,7 +5,7 @@
             @php($first_level_pages = get_region_halland_tree_first_level())
             @foreach($first_level_pages as $index => $page)
                 <li class="mx1" style="display:inline;">
-                    <a class="" href="{{ $page->url }}">{{ $page->post_title }}</a>
+                    <a class="rh-link--navigation" href="{{ $page->url }}">{{ $page->post_title }}</a>
                 </li>
             @endforeach
         </ul>
