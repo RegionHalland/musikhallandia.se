@@ -6,9 +6,9 @@
             @foreach($first_level_pages as $index => $page)
                 <li class="mx1" style="display:inline;">
                 @if($page->active === true)
-                    <a class="rh-link--navigation" href="{{ $page->url }}" style="border-bottom:2px solid pink;">{{ $page->post_title }}</a>
+                    <a class="rh-link--navigation" href="{{ $page->url }}" style="white-space: nowrap; border-bottom:2px solid pink;">{{ $page->post_title }}</a>
                 @else
-                    <a class="rh-link--navigation" href="{{ $page->url }}">{{ $page->post_title }}</a>
+                    <a class="rh-link--navigation" href="{{ $page->url }}" style="white-space: nowrap">{{ $page->post_title }}</a>
                 @endif
                 </li>
             @endforeach
