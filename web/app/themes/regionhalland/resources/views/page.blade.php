@@ -33,10 +33,10 @@
 		</div>
 
 		{{-- Blurbs på nedre delen av sidan --}}
-		<div class="rh-xpad-A pt3 pb3" style="background: #EFE7DA;">
-			<div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
-				@php($myBlurbs = get_region_halland_acf_main_post_page_links_blurbs())
-				@if(isset($myBlurbs))
+		@php($myBlurbs = get_region_halland_acf_main_post_page_links_blurbs())
+		@if($myBlurbs)
+			<div class="rh-xpad-A pt3 pb3" style="background: #EFE7DA;">
+				<div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
 					<ul>
 						@foreach ($myBlurbs as $blurbs)
 							<li class="pb4">
@@ -50,9 +50,10 @@
 							</li>
 						@endforeach
 					</ul>
-				@endif
+				</div>
 			</div>
-		</div>
+		@endif
+
 	</main>
 	@include('partials.newsletter')
 @endsection
