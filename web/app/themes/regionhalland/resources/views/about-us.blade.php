@@ -7,22 +7,7 @@
 @extends('layouts.app')
 @section('content')
     @include('partials.hero')
-    <div style="background: #EFE7DA;">
-        <div class="mx-auto" style="max-width: 1440px;">
-            @if(function_exists('get_region_halland_page_children'))
-                <ul class="py2">
-                @php($myPages = get_region_halland_page_children())
-                @if(isset($myPages))
-                    @foreach ($myPages as $myChilds)
-                        <li class="mx1" style="display:inline;">
-                            <a class="rh-link--navigation" href="{{ $myChilds->url }}">{{ $myChilds->post_title }}</a>
-                        </li>
-                    @endforeach
-                @endif
-                </ul>
-            @endif
-        </div>
-    </div>
+    @include('partials.nav-level2')
 
     {{-- Huvudinnehåll --}}
     @while(have_posts()) @php(the_post())
@@ -32,10 +17,13 @@
                 <h1>{{ the_title() }}</h1>
                 <p><strong>{{ get_region_halland_acf_page_ingress() }}</strong></p>
                 <p>{!! the_content() !!}</p>
+
+                {{-- Box med loggor för samarbetspartners --}}
                 <h2>Vi samarbetar med</h2>
                 <div class="p3" style="background: #EDEDED;">
                     Loggor
                 </div>
+                
             </main>
         </div>
     </div>
