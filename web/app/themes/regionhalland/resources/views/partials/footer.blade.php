@@ -24,12 +24,14 @@
                 <ul>
                     @foreach($first_level_pages as $first_level_page)
                         @if($first_level_page->active === true)
-                            <li>
+                            <li style="position:relative;">
                                 <a class="active rh-link--navigation" href="{{ $first_level_page->url }}">{{ $first_level_page->post_title }}</a>
+                                <span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span>
                             </li>
                         @else
-                            <li>
+                            <li style="position:relative;">
                                 <a class="rh-link--navigation" href="{{ $first_level_page->url }}">{{ $first_level_page->post_title }}</a>
+                                <span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left: 7em;"></span>
                             </li>
                         @endif
                     @endforeach
@@ -39,12 +41,12 @@
         <div class="left-align col col-12 sm-col-4 md-col-3">
             <p class="h2 pt3">Om oss</p>
             <ul>
-                <li><a class="rh-link--navigation" href="/om-oss">Om oss</a></li>
-                <li><a class="rh-link--navigation" href="/">Vår vision</a></li>
-                <li><a class="rh-link--navigation" href="/">Vårt uppdrag</a></li>
-                <li><a class="rh-link--navigation" href="/">Lediga jobb</a></li>
-                <li><a class="rh-link--navigation" href="/">Kontakt</a></li>
-                <li><a class="rh-link--navigation" href="/">Press & Media</a></li>
+                <li style="position:relative;"><a class="rh-link--navigation" href="/om-oss">Om oss</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em; "></span></li>
+                <li style="position:relative;"><a class="rh-link--navigation" href="/">Vår vision</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
+                <li style="position:relative;"><a class="rh-link--navigation" href="/">Vårt uppdrag</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
+                <li style="position:relative;"><a class="rh-link--navigation" href="/">Lediga jobb</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
+                <li style="position:relative;"><a class="rh-link--navigation" href="/">Kontakt</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
+                <li style="position:relative;"><a class="rh-link--navigation" href="/">Press & Media</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
             </ul>
         </div>
 
@@ -69,7 +71,7 @@
                 <strong>Fax:</strong> 035 - 13 54 44
             </p>
             <p>
-                <a class="rh-link--navigation" href="">Kontakta personalen</a>
+                <a class="rh-link--navigation" href="">Kontakta personalen</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;"></span>
             </p>
 
         </div>
