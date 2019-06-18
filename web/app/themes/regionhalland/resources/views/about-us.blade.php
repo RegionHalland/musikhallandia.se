@@ -23,7 +23,7 @@
                 <div class="p3" style="background: #EDEDED;">
                     Loggor
                 </div>
-                
+
             </main>
         </div>
     </div>
