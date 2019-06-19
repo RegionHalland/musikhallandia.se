@@ -5,7 +5,7 @@
             @php($first_level_pages = get_region_halland_tree_first_level())
             @foreach($first_level_pages as $index => $page)
                 <li class="mx1" style="display:inline;">
-                @if($page->active === true)
+                @if($page->is_active === 1)
                     <a class="py1 rh-link--navigation" href="{{ $page->url }}" style="white-space: nowrap; border-bottom:4px solid #FA3CB4;">{{ $page->post_title }}</a>
                 @else
                     <a class="rh-link--navigation" href="{{ $page->url }}" style="white-space: nowrap">{{ $page->post_title }}</a>
