@@ -57,4 +57,21 @@
           flex: 1 0 auto;
 }
 
+.jump-to-content {
+    display: block;
+    background: #fff;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    height: 0;
+}
+
+.jump-to-content:focus {
+    position: initial;
+    background: #fcaf15;
+    padding: 0.5rem;
+    height: auto;
+    color: black;
+}
+
 /*# sourceMappingURL=main.css.map*/
