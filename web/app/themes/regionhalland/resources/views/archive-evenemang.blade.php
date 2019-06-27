@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    @include('partials.hero-widget')
+    @include('partials.content.hero-widget')
     {{-- Ingress-container --}}
     <div style="background:#EFE7DA;">
         <div class="center p3" style="max-width:40em; text-align:center; line-height:1.4;">
@@ -32,7 +32,7 @@
         </main>
     </div>
 
-    @include('partials.newsletter')
+    @include('partials.content.newsletter')
 
 @endsection
 

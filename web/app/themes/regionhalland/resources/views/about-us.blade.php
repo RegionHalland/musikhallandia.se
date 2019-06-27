@@ -6,8 +6,8 @@
 
 @extends('layouts.app')
 @section('content')
-    @include('partials.hero')
-    @include('partials.nav-level2')
+    @include('partials.content.hero')
+    @include('partials.navigation.nav-level2')
 
     {{-- Huvudinnehåll --}}
     @while(have_posts()) @php(the_post())
@@ -30,7 +30,7 @@
 
     @endwhile
 
-    @include('partials.newsletter')
+    @include('partials.content.newsletter')
 
 @endsection
 

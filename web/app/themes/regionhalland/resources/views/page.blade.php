@@ -8,8 +8,8 @@
 
 @section('content')
 
-	@include('partials.hero')
-	@include('partials.nav-level2')
+	@include('partials.content.hero')
+	@include('partials.navigation.nav-level2')
 	<main>
 		<div class="rh-xpad-A pt3 pb3" style="background: #FBF9F4">
 			<div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
@@ -55,5 +55,5 @@
 		@endif
 
 	</main>
-	@include('partials.newsletter')
+	@include('partials.content.newsletter')
 @endsection

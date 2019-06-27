@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('partials.hero')
+    @include('partials.content.hero')
 
     <div class="rh-xpad-A pt3 pb3" style="background: #FBF9F4">
         <div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
@@ -67,5 +67,5 @@
         </div>
 
     </div>
-    @include('partials.newsletter')
+    @include('partials.content.newsletter')
 @endsection

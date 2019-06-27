@@ -1,13 +1,13 @@
 <!doctype html>
 <html data-server="{!! env('SITE_SERVER') !!}" data-version="1.0.0" style="height: 101%;" @php(language_attributes())>
-    @include('partials.head')
+    @include('partials.sitewide.html-head')
     <body style="height: 101%" @php(body_class())>
-        @include('partials.jump-to-content')
-        @include('partials.part-of-region-halland')
-        @include('partials.cookie-notice')
-        @include('partials.nav-site')
+        @include('partials.sitewide.jump-to-content')
+        @include('partials.sitewide.part-of-region-halland')
+        @include('partials.messages.cookie-notice')
+        @include('partials.navigation.nav-site')
 
         @yield('content')
-        @include('partials.footer')
+        @include('partials.sitewide.footer')
     </body>
 </html>
