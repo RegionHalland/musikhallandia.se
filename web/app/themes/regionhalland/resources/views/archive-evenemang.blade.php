@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
-    @include('partials.hero')
+    @include('partials.hero-widget')
     {{-- Ingress-container --}}
     <div style="background:#EFE7DA;">
-        <div class="center p3" style="max-width:40em; text-align: center; line-height:1.4;">
-            Musik Hallandia möjliggör ett brett utbud av musikupplevelser - allt från festivaler och konserter till musikprogram och aktiviteter för barn och unga. Vi har något för alla, helt enkelt. Vill du veta mer? Hör av dig!
+        <div class="center p3" style="max-width:40em; text-align:center; line-height:1.4;">
+            Musik Hallandia är en musikinstitution helägd av Region Halland med målet att vara hela Hallands musikplattform. Vi vill förstärka kulturens kraft för att främja kreativiteten och öppenheten i regionen - och för att bygga ett musikliv för alla.
             <p><a class="rh-link--navigation" href=""><strong>Läs mer om oss</strong></a><span class="ml1 icon-arrow-right" style="font-family: feather !important;"></span></p>
         </div>
     </div>
@@ -12,9 +12,10 @@
     {{-- Huvudinnehåll --}}
     <div class="center px3 rh-article" style="max-width: 1440px;">
         <main>
-            <div style="display:flex; align-content: center;"><h1>Aktuella evenemang</h1></div>
+            <div style="width:100%; text-align: center;"><h1>Aktuella evenemang</h1></div>
             @php($myData = get_region_halland_acf_page_evenemang_kommande_items())
-            @if(isset($myData))
+            @if(isset($myData[0]))
+
                 <div class="clearfix">
 
                     @foreach ($myData as $data)
@@ -25,6 +26,8 @@
                         </div>
                     @endforeach
                 </div>
+            @else
+                <div class="pb2" style="text-align: center;">Just nu har vi inga aktuella evenemang.</div>
             @endif
         </main>
     </div>
@@ -32,3 +35,6 @@
     @include('partials.newsletter')
 
 @endsection
+
+
+
