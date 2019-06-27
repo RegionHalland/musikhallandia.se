@@ -9,6 +9,17 @@
     line-height: 1.4;
 }
 
+.rh-article ul {
+    list-style-type: disc;
+    padding-left: 2ex;
+    line-height: 1.37em;
+}
+.rh-article ol {
+    list-style-type: decimal;
+    padding-left: 2ex;
+    line-height: 1.37em;
+}
+
 .rh-article img {
   max-width: 100%;
   height: auto;
