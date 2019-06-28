@@ -1,16 +1,4 @@
-    $(function() {
-
-        // ****************************
-        // *** Cookie notice accept ***
-        // ****************************    
-        $("#cookie-consent").on( "click", function() {
-            // set cookie with vanilla javascript function
-            setCookie('cookie_notice_accepted','1',365);
-            // Hide div with cookie notice text + button
-            $("#cookie-notice").hide();
-        });
-    });
-
+$(function() {
     // **************************************
     // *** Javascript set cookie function ***
     // **************************************
@@ -24,3 +12,13 @@
         document.cookie = name + "=" + (value || "")  + expires + "; path=/";
     }
 
+    // ****************************
+    // *** Cookie notice accept ***
+    // ****************************
+    $("#cookie-consent").on( "click", function() {
+        // set cookie with vanilla javascript function
+        setCookie('cookie_notice_accepted','1',365);
+        // Hide div with cookie notice text + button
+        $(".rh-cookie").hide();
+    });
+});
