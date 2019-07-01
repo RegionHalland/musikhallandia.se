@@ -80,6 +80,10 @@
       "url": "https://github.com/RegionHalland/region-halland-acf-page-links-blurbs.git"
     },
     {
+      "type": "vcs",
+      "url": "https://github.com/RegionHalland/region-halland-acf-theme-links.git"
+    },
+    {
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -119,9 +123,10 @@
     "regionhalland/region-halland-parent-page": "1.0.0",
     "regionhalland/region-halland-acf-page-evenemang": "2.0.1",
     "regionhalland/region-halland-acf-page-ingress": "1.1.2",
-    "regionhalland/region-halland-acf-page-contact-card": "1.0.2",
+    "regionhalland/region-halland-acf-page-contact-card": "1.1.0",
     "regionhalland/region-halland-tree-first-second-level-child-pages": "1.0.0",
-    "regionhalland/region-halland-acf-page-links-blurbs": "1.4.2"
+    "regionhalland/region-halland-acf-page-links-blurbs": "1.4.2",
+    "regionhalland/region-halland-acf-theme-links": "1.0.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
