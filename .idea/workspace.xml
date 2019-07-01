@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef2fc591-f4da-4934-a250-0845bf05eeb6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/sitewide/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/sitewide/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/archive-evenemang.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/archive-evenemang.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/front-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/front-page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/ingress-with-navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/ingress-with-navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/sitewide/html-head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/sitewide/html-head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/include/scripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/include/scripts/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/include/style/development.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/include/style/development.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,39 +20,70 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/sitewide/footer.blade.php">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/ingress-with-navigation.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="992">
-              <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+            <state relative-caret-position="115">
+              <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/include/scripts/application.js">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/event-grid.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/include/scripts/jquery.3.3.1.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="253">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#main#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#main#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/front-page.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/sitewide/html-head.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+            <state relative-caret-position="992">
+              <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/include/style/MyFontsWebfontsKit.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="736">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/include/style/development.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/archive-evenemang.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -62,7 +94,11 @@
     <findStrings>
       <find>first</find>
       <find>tree</find>
+      <find>url('webfonts/</find>
     </findStrings>
+    <replaceStrings>
+      <replace>url('./fonts/</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -172,15 +208,19 @@
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/hero-widget.blade.php" />
         <option value="$PROJECT_DIR$/web/app/plugins/region-halland-tree-first-level/region_halland_tree_first_level.php" />
         <option value="$PROJECT_DIR$/web/app/plugins/region-halland-acf-page-evenemang/region_halland_acf_page_evenemang.php" />
-        <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/archive-evenemang.blade.php" />
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/ingress-container.blade.php" />
-        <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/front-page.blade.php" />
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/nav-level2.blade.php" />
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/web/include/style/development.css" />
-        <option value="$PROJECT_DIR$/web/include/scripts/application.js" />
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/sitewide/footer.blade.php" />
+        <option value="$PROJECT_DIR$/web/include/scripts/application.js" />
+        <option value="$PROJECT_DIR$/web/app/plugins/region-halland-acf-cookie-notice/region_halland_acf_cookie_notice.php" />
+        <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/ingress-with-navigation.blade.php" />
+        <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/event-grid.blade.php" />
+        <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/archive-evenemang.blade.php" />
+        <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/front-page.blade.php" />
         <option value="$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/sitewide/html-head.blade.php" />
+        <option value="$PROJECT_DIR$/web/include/style/MyFontsWebfontsKit.css" />
+        <option value="$PROJECT_DIR$/web/include/style/development.css" />
       </list>
     </option>
   </component>
@@ -282,6 +322,18 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="partials" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="musikhallandia.se" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musikhallandia.se" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="regionhalland" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
               <item name="sitewide" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -302,7 +354,7 @@
               <item name="musikhallandia.se" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="include" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -351,12 +403,12 @@
       <updated>1559648995099</updated>
       <workItem from="1559648996650" duration="18836000" />
       <workItem from="1561459848096" duration="217000" />
-      <workItem from="1561555293011" duration="6829000" />
+      <workItem from="1561555293011" duration="9129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46582000" />
+    <option name="totallyTimeSpent" value="48882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -473,28 +525,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/event-grid.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/article.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/ingress-with-navigation.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/entry-meta.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/messages/cookie-notice.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/hero.blade.php">
@@ -563,13 +597,6 @@
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/404.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/front-page.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/template-contact.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="813">
@@ -598,28 +625,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/page.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-219">
-          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="e#216#243#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/include/img/MH_Greyscale.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/include/img/navigation_logo.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/include/style/development.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-660">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/include/scripts/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -630,17 +640,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/single-evenemang.blade.php">
+    <entry file="file://$PROJECT_DIR$/web/app/plugins/region-halland-acf-cookie-notice/region_halland_acf_cookie_notice.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        <state relative-caret-position="371">
+          <caret line="116" column="4" lean-forward="true" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/archive-evenemang.blade.php">
+    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/messages/cookie-notice.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        <state relative-caret-position="230">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -655,8 +665,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/include/scripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="483">
+          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -667,10 +677,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/page.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/single-evenemang.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/event-grid.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#main#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/content/ingress-with-navigation.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/front-page.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/partials/sitewide/html-head.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="7" lean-forward="true" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        <state relative-caret-position="992">
+          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/regionhalland/resources/views/archive-evenemang.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/include/style/development.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/include/style/MyFontsWebfontsKit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>

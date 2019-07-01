@@ -1,3 +1,13 @@
+/* @import must be at top of file, otherwise fonts will not work */
+@import url("//hello.myfonts.net/count/396833");
+@font-face {font-family: 'HelveticaLTWXX-BlackCond';src: url('../fonts/396833_0_0.eot');src: url('../fonts/396833_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/396833_0_0.woff2') format('woff2'),url('../fonts/396833_0_0.woff') format('woff'),url('../fonts/396833_0_0.ttf') format('truetype');}
+@font-face {font-family: 'HelveticaNowText-Regular';src: url('../fonts/396833_1_0.eot');src: url('../fonts/396833_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/396833_1_0.woff2') format('woff2'),url('../fonts/396833_1_0.woff') format('woff'),url('../fonts/396833_1_0.ttf') format('truetype');}
+@font-face {font-family: 'HelveticaNowText-Bold';src: url('../fonts/396833_2_0.eot');src: url('../fonts/396833_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/396833_2_0.woff2') format('woff2'),url('../fonts/396833_2_0.woff') format('woff'),url('../fonts/396833_2_0.ttf') format('truetype');}
+
+
+body {
+    font-family: HelveticaNowText-Regular;
+}
 
 .rh-article h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
