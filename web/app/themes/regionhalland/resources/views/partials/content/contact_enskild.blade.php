@@ -10,7 +10,7 @@
 	</div>
 
 	{{$myContact->post_title}}<br>
-	{{$myContact->post_content}}<br>
+	{!! wpautop($myContact->post_content) !!}
 
 	Namn: {{get_region_halland_acf_page_contact_card_name($cid)}}<br>
 	Epost: {{get_region_halland_acf_page_contact_card_epost($cid)}}<br>

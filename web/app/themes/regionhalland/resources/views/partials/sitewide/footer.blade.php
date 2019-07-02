@@ -1,4 +1,4 @@
-<footer id="footer-top-placeholder" style="background-color: #EFE7DA; line-height: 1.4;">
+<footer class="mx-auto" id="footer-top-placeholder" style="max-width:1440px; background-color: #EFE7DA; line-height: 1.4;">
     <div class="clearfix center px3 pb3 pt2" style="max-width: 1440px;">
         @if(function_exists('get_region_halland_theme_links'))
             @php($myData = get_region_halland_theme_links())

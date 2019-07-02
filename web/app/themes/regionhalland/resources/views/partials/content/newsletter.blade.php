@@ -1,4 +1,4 @@
-<div style="background:#D3D3D2;line-height:1.4;">
+<div class="mx-auto" style="max-width: 1440px; background:#D3D3D2;line-height:1.4;">
     <div     class="px3 pt3 pb4 clearfix center" style="text-align: center; max-width:1440px;">
 
         <h1 class="h2">Nyhetsbrev</h1>
