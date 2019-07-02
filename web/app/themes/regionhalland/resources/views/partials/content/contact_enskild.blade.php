@@ -1,7 +1,13 @@
 @php($myContact = get_region_halland_single_page_information($cid))
 <div>
-
-	<a href="./">[TILLBAKA]</a><br>
+	<div class="mb2">
+		<a href="./" class="rh-round-button rh-round-button--small icon-arrow-left"></a>
+		<strong>
+			<a href="./" class="h3 rh-link--navigation" style="line-height: 1.4;">
+				Visa alla kontakter
+			</a>
+		</strong>
+	</div>
 
 	{{$myContact->post_title}}<br>
 	{{$myContact->post_content}}<br>
