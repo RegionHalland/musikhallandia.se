@@ -20,7 +20,7 @@
                             @foreach ($myPages as $myChilds)
                                 <div class="col col-12 sm-col-12 md-col-6 lg-col-4" style="height:350px; overflow: hidden; display: flex; flex-wrap: wrap; justify-content: center;">
                                     <div class="p1" style="display: block;">
-                                        <img src="{{ $myChilds->image_url }}" style="width:400px; height: 250px;" />
+                                        <img src="{{ $myChilds->image_url }}" style="width:400px; height: 300px;" />
 
                                         <p style="display:block;">
                                             <strong>
