@@ -5,14 +5,14 @@
             <div class="col col-12 md-col-6">
                 <div class="m2 p2" style="position: relative; text-align:center; line-height: 7em; background:black;height:9em;">
                     <div style="line-height:1; color: white; position: absolute; top:1em; left:1em;">Vi söker</div>
-                    <a class="h2" href="{!! $myData['link_1'] !!}" style="color:white;">{!! $myData['text_1'] !!}</a>
+                    <a class="h1" href="{!! $myData['link_1'] !!}" style="color:white;">{!! $myData['text_1'] !!}</a>
                     <span style="width:0; height: 0; position: absolute; bottom: 0; right: 0; border-right: 30px solid #FA3CB4; border-top: 80px solid transparent;"></span>
                 </div>
             </div>
             <div class="col col-12 md-col-6">
                 <div class="m2 p2" style="position: relative; background:black; line-height:7em; text-align:center; height:9em;">
                     <div style="line-height:1; color: white; position: absolute; top:1em; left:1em;">Vi söker</div>
-                    <a class="h2" href="{!! $myData['link_2'] !!}" style="color:white">{!! $myData['text_2'] !!}</a>
+                    <a class="h1" href="{!! $myData['link_2'] !!}" style="color:white">{!! $myData['text_2'] !!}</a>
                     <span style="width:0; height: 0; position: absolute; bottom: 0; right: 0; border-right: 30px solid #FA3CB4; border-top: 80px solid transparent;"></span>
                 </div>
             </div>
