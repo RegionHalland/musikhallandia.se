@@ -1,7 +1,7 @@
 @if(function_exists('get_region_halland_tree_first_second_level_child_pages'))
     @php($myPages = get_region_halland_tree_first_second_level_child_pages())
     @if(isset($myPages) && !empty($myPages['first_page']))
-        <div class="py2" style="background: #EFE7DA;">
+        <div class="py2 mx-auto" style="max-width: 1440px; background: #EFE7DA;">
             <nav aria-label="Navigering nivå två" class="flex items-center justify-between mx-auto" style="max-width: 1440px; background: #EFE7DA;">
                 <ul class="" style="display: inline;">
                     @if($myPages['first_page']->active == 1)
