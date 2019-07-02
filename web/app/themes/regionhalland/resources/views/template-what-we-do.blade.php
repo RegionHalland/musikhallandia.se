@@ -18,9 +18,12 @@
                         @php($myPages = get_region_halland_page_children())
                         @if(isset($myPages))
                             @foreach ($myPages as $myChilds)
-                                <div class="col col-12 md-col-4" style="height:400px; display: flex; flex-wrap: wrap; justify-content: center;">
-                                    <div><img src="{{ $myChilds->image_url }}" style="" /></div>
-                                    <p style="display:block;"><a href="{{ $myChilds->url }}">{{ $myChilds->post_title }}</a></p>
+                                <div class="col col-12 sm-col-6 md-col-4" style="height:400px; overflow: hidden; display: flex; flex-wrap: wrap; justify-content: center;">
+                                    <div class="p1" style="display: block;">
+                                        <img src="{{ $myChilds->image_url }}" style="width:400px; height: 250px;" />
+                                        <p style="display:block;"><a href="{{ $myChilds->url }}">{{ $myChilds->post_title }}</a></p>
+                                    </div>
+
                                 </div>
                             @endforeach
                         @endif
