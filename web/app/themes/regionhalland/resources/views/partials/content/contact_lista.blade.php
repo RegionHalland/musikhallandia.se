@@ -27,7 +27,11 @@
                         {!! $data['contact_name'] !!}
                     </a>
                 </h2>
-                {!! $data['post_content'] !!}
+                <p>
+                    <strong>
+                        {{ $data['contact_title'] }}
+                    </strong>
+                </p>
                 <p>
                     {{ $data['contact_epost'] }}
                 </p>
