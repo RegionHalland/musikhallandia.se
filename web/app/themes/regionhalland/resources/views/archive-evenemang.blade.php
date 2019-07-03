@@ -10,9 +10,9 @@
     @include('partials.content.hero-widget')
     @include('partials.content.ingress-with-navigation', array('ingress_text' => 'Musik Hallandia är en musikinstitution helägd av Region Halland med målet att vara hela Hallands musikplattform. Vi vill förstärka kulturens kraft för att främja kreativiteten och öppenheten i regionen - och för att bygga ett musikliv för alla.'))
     @if($all==1)
-        @include('partials.content.all-events-grid')
+        @include('partials.content.events-all-grid')
     @else
-        @include('partials.content.current-events-grid')
+        @include('partials.content.events-current-grid')
     @endif
 
     @include('partials.content.newsletter')
