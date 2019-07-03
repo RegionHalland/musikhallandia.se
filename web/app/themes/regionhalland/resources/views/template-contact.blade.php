@@ -28,7 +28,7 @@
                 <div class="clearfix">
                     
                     {{-- Content --}}
-                    <div class="col col-12 md-col-9 rh-article">
+
                         
                         @if($type == 1)
                             @include('partials.content.contact_lista')
@@ -38,7 +38,7 @@
                             @include('partials.content.contact_enskild')
                         @endif
 
-                    </div>
+
 
                 </div>
             </div>
