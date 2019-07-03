@@ -10,7 +10,7 @@
 
 	@include('partials.content.hero')
 	@include('partials.navigation.nav-level2')
-	<main>
+	<main id="main">
 		@include('partials.content.content')
 
 		@include('partials.content.blurbs')
