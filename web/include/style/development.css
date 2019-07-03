@@ -4,7 +4,6 @@
 @font-face {font-family: 'HelveticaNowText-Regular';src: url('../fonts/396833_1_0.eot');src: url('../fonts/396833_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/396833_1_0.woff2') format('woff2'),url('../fonts/396833_1_0.woff') format('woff'),url('../fonts/396833_1_0.ttf') format('truetype');}
 @font-face {font-family: 'HelveticaNowText-Bold';src: url('../fonts/396833_2_0.eot');src: url('../fonts/396833_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/396833_2_0.woff2') format('woff2'),url('../fonts/396833_2_0.woff') format('woff'),url('../fonts/396833_2_0.ttf') format('truetype');}
 
-
 body {
     font-family: HelveticaNowText-Regular;
 }
@@ -12,6 +11,27 @@ body {
 strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: HelveticaNowText-Bold;
 }
+
+.rh-pillbutton {
+    /* Visuellt */
+    border-radius: 50%;
+    padding: 1.5ex;
+
+    /* Typografi */
+    color: black;
+    text-decoration: none;
+}
+
+.rh-pillbutton--grey {
+    background: #FA3CB4;
+    border: 1px solid #FA3CB4;
+}
+
+.rh-pillbutton--pink {
+    background: #D3D3D2;
+    border: 1px solid #D3D3D2;
+}
+
 
 .rh-article h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
