@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('partials.content.hero')
+    @include('partials.content.hero-widget')
 
     <div class="rh-xpad-A pt3 pb3" style="background: #FBF9F4">
         <div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
