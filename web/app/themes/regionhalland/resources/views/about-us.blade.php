@@ -9,6 +9,8 @@
     @include('partials.content.hero')
     @include('partials.navigation.nav-level2')
 
+    @include('partials.navigation.nav-tree')
+    
     {{-- Huvudinnehåll --}}
     @while(have_posts()) @php(the_post())
     <div class="mx-auto" style="max-width: 1440px; background: #FBF9F4;">

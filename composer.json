@@ -88,6 +88,10 @@
       "url": "https://github.com/RegionHalland/region-halland-acf-page-news-simple.git"
     },
     {
+      "type": "vcs",
+      "url": "https://github.com/RegionHalland/region-halland-tree-all-levels.git"
+    },
+    {
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -131,7 +135,8 @@
     "regionhalland/region-halland-tree-first-second-level-child-pages": "1.0.0",
     "regionhalland/region-halland-acf-page-links-blurbs": "1.4.2",
     "regionhalland/region-halland-acf-theme-links": "1.0.0",
-    "regionhalland/region-halland-acf-page-news-simple": "1.2.0"
+    "regionhalland/region-halland-acf-page-news-simple": "1.2.0",
+    "regionhalland/region-halland-tree-all-levels": "1.0.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
