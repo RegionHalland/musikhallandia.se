@@ -1,1 +1,1 @@
-<div class="py1" style="display:flex; justify-content:center; background: #FCF800;">En del av Region Halland</div>
+<div class="py1 mx-auto" style="text-align:center; max-width:1440px; background: #FCF800;">En del av Region Halland</div>

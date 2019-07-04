@@ -1,4 +1,4 @@
-<div style="background: #EFE7DA;">
+<div class="mx-auto" style="max-width:1440px; background: #EFE7DA;">
     <nav aria-label="Sidhuvud" class="flex items-center justify-between mx-auto" style="max-width: 1440px; background: #EFE7DA;">
         <a href="{!! env('WP_HOME') !!}"><img style="" src="{!! env('WP_HOME') !!}/include/img/MH_Greyscale.png" /></a>
         <ul class="" style="display: inline;">
