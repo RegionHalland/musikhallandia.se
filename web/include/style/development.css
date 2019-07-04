@@ -37,6 +37,11 @@ strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     border: 1px solid #FCF800;
 }
 
+.rh-pillbutton--yellow:hover,.rh-pillbutton--yellow:focus {
+    background: #FCF800;
+    border: 1px solid #FA3CB4;
+}
+
 .rh-article h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   padding-top: 0.5ex;
