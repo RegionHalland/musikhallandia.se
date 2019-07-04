@@ -6,7 +6,7 @@
             <a href="./?all=1" class="rh-pillbutton rh-pillbutton--pink" style="height: 3em; padding-left:1em; padding-right: 1em; border-radius: 3em;">Alla evenemang</a>
         </div>
         <div style="width:100%; text-align: center;"><h1>Aktuella evenemang</h1></div>
-        @php($myData = get_region_halland_acf_page_evenemang_kommande_items(2))
+        @php($myData = get_region_halland_acf_page_evenemang_kommande_items(12))
         @if(isset($myData[0]))
             @include('partials.content.event-card')
         @else
