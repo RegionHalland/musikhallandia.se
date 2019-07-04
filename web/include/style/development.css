@@ -12,6 +12,14 @@ strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: HelveticaNowText-Bold;
 }
 
+.rh-hallandia-newslist--newsitem:nth-child(odd) {
+    background: #EFE7DA;
+}
+
+.rh-hallandia-newslist--newsitem:nth-child(even) {
+    background: #FBF9F5;
+}
+
 .rh-pillbutton {
     /* Visuellt */
     border-radius: 50%;
