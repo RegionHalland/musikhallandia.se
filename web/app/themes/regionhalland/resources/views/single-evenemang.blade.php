@@ -21,7 +21,9 @@
                             </p>
                             @php($myBiljett = get_region_halland_acf_page_evenemang_biljett())
                             @if($myBiljett['biljett_has_link'] == 1)
-                                <a href="{{ $myBiljett['biljett_url'] }}" class="rh-round-button" style="height: 3em; padding-left:1em; padding-right: 1em; border-radius: 3em;">Köp biljett</a>
+                                <p class="pt3 pb1">
+                                <a href="{{ $myBiljett['biljett_url'] }}" class="rh-pillbutton rh-pillbutton--yellow" style="height: 3em; padding-left:1em; padding-right: 1em; border-radius: 3em;">Köp biljett</a>
+                                </p>
                             @endif
                         @endwhile
                     </div>
