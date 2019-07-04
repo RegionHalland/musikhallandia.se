@@ -2,7 +2,7 @@
 @if(get_the_post_thumbnail_url())
     @if(isset($myData[0]))
             <div style="background: rgb(211, 211, 210);">
-            <div class="mx-auto" style="min-height: 400px; max-height: 420px; max-width:1440px; background-image: url('{!! $myData[0]->image_url !!}');  height: 50%; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;">
+            <div class="mx-auto" style="min-height: 600px; max-height: 600px; max-width:1440px; background-image: url('{!! $myData[0]->image_url !!}'); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;">
                 <div class="center pb3 pt2 pr3" style="padding-left: 50px; position: absolute; bottom: 1.5em; left: 2.5em; color: white; background: black; z-index: 2; max-width: 1440px;">
                     @if(isset($myData[0] -> post_title))
                         <span class="h1" style="color:white;">{{ $myData[0] -> post_title }}</span><br>
