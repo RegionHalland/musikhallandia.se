@@ -131,7 +131,7 @@
     "regionhalland/region-halland-tree-first-second-level-child-pages": "1.0.0",
     "regionhalland/region-halland-acf-page-links-blurbs": "1.4.2",
     "regionhalland/region-halland-acf-theme-links": "1.0.0",
-    "regionhalland/region-halland-acf-page-news-simple": "1.1.0"
+    "regionhalland/region-halland-acf-page-news-simple": "1.2.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
