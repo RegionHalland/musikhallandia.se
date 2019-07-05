@@ -19,21 +19,29 @@
                         </div>
 
                         @while(have_posts()) @php(the_post())
+                            
                             <h1>{{ $post->post_title }}</h1>
 
                             <strong>
                                 {{ get_region_halland_acf_page_evenemang_ingress() }}
                             </strong>
 
+                            @php($myImage = get_region_halland_acf_page_evenemang_puff_image())
+
                             <p>
+                                @if($myImage['puff_has_image'] == 1)
+                                    <img align="left" style="padding-top: 1em; padding-right: 1em;" src="{{$myImage['puff_url']}}" width="{{$myImage['puff_width']}}" height="{{$myImage['puff_height']}}">
+                                @endif
                                 {{ the_content() }}
                             </p>
+                            
                             @php($myBiljett = get_region_halland_acf_page_evenemang_biljett())
                             @if($myBiljett['biljett_has_link'] == 1)
                                 <p class="pt3 pb1">
                                 <a href="{{ $myBiljett['biljett_url'] }}" class="rh-pillbutton rh-pillbutton--yellow" style="height: 3em; padding-left:1em; padding-right: 1em; border-radius: 3em;">Köp biljett</a>
                                 </p>
                             @endif
+
                         @endwhile
                     </div>
                     <div class="rh-xpad--left col col-12 md-col-3" >
