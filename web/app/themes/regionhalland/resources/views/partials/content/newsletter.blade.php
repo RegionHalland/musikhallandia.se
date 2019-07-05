@@ -6,7 +6,7 @@
         <p class="center" style="max-width: 30em;">Häng med i vad som händer, när det händer.<br>
         Prenumerera på vårt nyhetsbrev och få det senaste om kommande konserter, festivaler och andra evenemang direkt till din mejl.
             </p>
-        <a href="" class="rh-link--navigation"><strong>Anmäl dig till vårt nyhetsbrev</strong></a><span class="ml1 icon-arrow-right" style="font-family: feather !important;"></span>
+        <a href="https://a.entergate.se/region_halland/mhnyheter" class="rh-link--navigation"><strong>Anmäl dig till vårt nyhetsbrev</strong></a><span class="ml1 icon-arrow-right" style="font-family: feather !important;"></span>
 
         {{-- <div class="col col-12 sm-col-6">
 
