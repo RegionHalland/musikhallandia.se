@@ -1,19 +1,19 @@
-@php($myData = get_region_halland_acf_page_evenemang_kommande_items(1))
-@if(isset($myData))
-    <div class="mx-auto" style="min-height: 600px; max-height: 600px; max-width:1440px; background-image: url('{!! $myData[0]->image_url !!}'); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;">
+@php($myData = get_region_halland_acf_page_evenemang_kommande_single())
+@if($myData)
+    <div class="mx-auto" style="min-height: 600px; max-height: 600px; max-width:1440px; background-image: url('{!! $myData->image_url !!}'); background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;">
         <div class="center pb3 pt2 pr3" style="padding-left: 50px; position: absolute; bottom: 1.5em; left: 2.5em; color: white; background: black; z-index: 2; max-width: 1440px;">
-            @if(isset($myData[0] -> post_title))
-                <span class="h1" style="color:white;">{{ $myData[0] -> post_title }}</span><br>
+            @if(isset($myData->post_title))
+                <span class="h1" style="color:white;">{{ $myData->post_title }}</span><br>
             @endif
                 <span class="h3" style="font-weight: normal; color:white;">
-                    @if(isset($myData[0] -> spelstalle))
-                        {{ $myData[0] -> spelstalle }},
+                    @if(isset($myData->spelstalle))
+                        {{ $myData->spelstalle }},
                     @endif
-                    @if(isset($myData[0] -> stad))
-                        {{ $myData[0] -> stad }}
+                    @if(isset($myData->stad))
+                        {{ $myData->stad }}
                     @endif
-                    @if(isset($myData[0] -> date))
-                        {{ $myData[0] -> date }}
+                    @if(isset($myData->date))
+                        {{ $myData->date }}
                     @endif
                 </span>
 
