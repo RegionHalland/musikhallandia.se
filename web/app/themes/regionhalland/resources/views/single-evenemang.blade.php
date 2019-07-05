@@ -26,12 +26,7 @@
                                 {{ get_region_halland_acf_page_evenemang_ingress() }}
                             </strong>
 
-                            @php($myImage = get_region_halland_acf_page_evenemang_puff_image())
-
                             <p>
-                                @if($myImage['puff_has_image'] == 1)
-                                    <img align="left" style="padding-top: 1em; padding-right: 1em;" src="{{$myImage['puff_url']}}" width="{{$myImage['puff_width']}}" height="{{$myImage['puff_height']}}">
-                                @endif
                                 {{ the_content() }}
                             </p>
                             
