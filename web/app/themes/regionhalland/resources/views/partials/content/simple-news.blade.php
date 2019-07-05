@@ -21,7 +21,7 @@
 
                             <h3 class="h2"><a class="rh-link--navigation" href="{{ $nyhet->url }}">{{ $nyhet->post_title }}</a></h3>
                             <p>{{ str_limit($nyhet->post_date, $limit = 11, $end = '') }}</p>
-                            <p>{!! wpautop($nyhet->post_content) !!}</p>
+                            <p>{!! do_shortcode(wpautop($nyhet->post_content)) !!}</p>
                             <a href="{{ $nyhet->link_url }}" target="{{ $nyhet->link_target }}">{{ $nyhet->link_title }}</a><br><br>
                         </div>
                     </li>
