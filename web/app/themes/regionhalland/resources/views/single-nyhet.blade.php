@@ -8,7 +8,7 @@
                 <div class="">
                     <a href="for-press/" class="rh-round-button rh-round-button--small icon-arrow-left"></a>
                     <strong>
-                        <a href="/om-oss/press-media/" class="h3 rh-link--navigation" style="line-height: 1.4;">
+                        <a href="for-press/" class="h3 rh-link--navigation" style="line-height: 1.4;">
                             Press & Media
                         </a>
                     </strong>
