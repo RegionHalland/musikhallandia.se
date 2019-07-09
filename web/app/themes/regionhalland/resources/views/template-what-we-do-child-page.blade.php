@@ -19,10 +19,13 @@
                 </a>
             </strong>
         </div>
+        
         @include('partials.content.content')
 
         @include('partials.content.blurbs')
 
     </main>
+
     @include('partials.content.newsletter')
+
 @endsection

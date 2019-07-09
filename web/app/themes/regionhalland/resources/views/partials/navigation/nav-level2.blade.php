@@ -1,6 +1,6 @@
 @if(function_exists('get_region_halland_tree_first_second_level_child_pages'))
     @php($myPages = get_region_halland_tree_first_second_level_child_pages())
-    @if(isset($myPages) && !empty($myPages['first_page']))
+    @if(isset($myPages) && !empty($myPages['first_page']) && $myPages['first_page']->post_name != 'vad-vi-gor')
         <div class="rh-xpad-A py2 mx-auto" style="max-width: 1440px; background: #EFE7DA;">
             <div class="rh-xpad-B">
                 <nav aria-label="Navigering nivå två" class="flex items-center justify-between mx-auto" style="max-width: 1440px; background: #EFE7DA;">
@@ -29,5 +29,18 @@
                 </nav>
             </div>
         </div>
+    @else     
+        <div class="rh-xpad-A pt3 pb1 mx-auto" style="max-width: 1440px; background: #FBF9F4">
+            <div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
+                <div class="">
+                    <a href="{{env('WP_HOME')}}/vad-vi-gor/" class="rh-round-button rh-round-button--small icon-arrow-left"></a>
+                    <strong>
+                        <a href="{{env('WP_HOME')}}/vad-vi-gor/" class="h3 rh-link--navigation" style="line-height: 1.4;">
+                            Vad vi gör
+                        </a>
+                    </strong>
+                </div>
+            </div>
+        </div>  
     @endif
 @endif

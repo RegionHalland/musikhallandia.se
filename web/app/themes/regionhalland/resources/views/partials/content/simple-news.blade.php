@@ -1,32 +1,19 @@
-<div class="rh-xpad-A pt2 mx-auto" style="max-width: 1440px; background: #EFE7DA;">
-    <div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
-        <div class="clearfix">
-            <h2>Nyheter</h2>
-        </div>
-    </div>
-</div>
+<?php
 
-@php($myNews = get_region_halland_get_page_news_simple())
-@if($myNews)
-    <ul>
-        @foreach ($myNews as $nyhet)
-            <div class="rh-xpad-A py3 mx-auto rh-hallandia-newslist--newsitem" style="max-width: 1440px;">
-                <div class="rh-xpad-B">
-                    <li class="">
-                        <div class="clearfix">
+    $type = 1;
+    $nid = 0;
+    
+    if(isset($_GET["nid"])){
+        $nid = $_GET["nid"];
+        $type = 2;
+    }
 
-                            @if($nyhet->image_url)
-                                <img class="mr2" src="{{ $nyhet->image_url }}" style="width:300px;height:200px; float:left;">
-                            @endif
+?>
 
-                            <h3 class="h2"><a class="rh-link--navigation" href="{{ $nyhet->url }}">{{ $nyhet->post_title }}</a></h3>
-                            <p>{{ str_limit($nyhet->post_date, $limit = 11, $end = '') }}</p>
-                            <p>{!! do_shortcode(wpautop($nyhet->post_content)) !!}</p>
-                            <a href="{{ $nyhet->link_url }}" target="{{ $nyhet->link_target }}">{{ $nyhet->link_title }}</a><br><br>
-                        </div>
-                    </li>
-                </div>
-            </div>
-        @endforeach
-    </ul>
+@if($type == 1)
+    @include('partials.content.simple-news-all')
+@endif
+                    
+@if($type == 2)
+    @include('partials.content.simple-news-single')
 @endif

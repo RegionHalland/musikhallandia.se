@@ -9,6 +9,7 @@
             <main id="main">
                 <div class="clearfix">
                     <div class="col col-12 md-col-9 rh-article">
+                        
                         <div class="mb2">
                             <a href="../" class="rh-round-button rh-round-button--small icon-arrow-left"></a>
                             <strong>
@@ -38,9 +39,11 @@
                             @endif
 
                         @endwhile
+
                     </div>
                     <div class="rh-xpad--left col col-12 md-col-3" >
                         <div class="p2 " style="background: #EFE7DA;">
+                            
                             <div class="pb3 mt2" style="border-bottom: 1px solid black;">
                                 <h2>Information</h2><br>
                                 <p>
@@ -58,8 +61,10 @@
                                         <a href="{{ $information['link_url'] }}" target="{{ $information['link_target'] }}">{{ $information['link_title'] }}</a><br>
                                     @endif
                                 @endforeach
+                                
                                 </p>
                             </div>
+                            
                             <div class="pb3 mt3 mb3" style="border-bottom: 1px solid black;">
                                 <h2>Arrangörer</h2>
                                 <p>
@@ -71,6 +76,7 @@
                                 @endforeach
                                 </p>
                             </div>
+
                         </div>
                     </div>
                 </div>
