@@ -17,6 +17,4 @@
 		@include('partials.content.blurbs')
 	</main>
 	
-	@include('partials.content.newsletter')
-
 @endsection

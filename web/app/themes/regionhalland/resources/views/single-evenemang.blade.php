@@ -87,5 +87,5 @@
         </div>
 
     </div>
-    @include('partials.content.newsletter')
+
 @endsection

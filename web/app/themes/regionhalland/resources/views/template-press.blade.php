@@ -15,6 +15,4 @@
         @include('partials.content.simple-news')
     </main>
     
-    @include('partials.content.newsletter')
-
 @endsection

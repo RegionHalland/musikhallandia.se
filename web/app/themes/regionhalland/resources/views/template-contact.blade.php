@@ -41,6 +41,4 @@
         </div>
     </main>
 
-    @include('partials.content.newsletter')
-
 @endsection

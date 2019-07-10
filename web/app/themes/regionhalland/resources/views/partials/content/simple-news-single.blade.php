@@ -35,6 +35,5 @@
             <br><br>
         </div>
     </main>
-    @include('partials.content.newsletter')
 
 @endif

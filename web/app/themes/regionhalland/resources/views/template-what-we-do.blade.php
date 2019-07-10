@@ -46,6 +46,4 @@
         </main>
     @endwhile
 
-    @include('partials.content.newsletter')
-
 @endsection

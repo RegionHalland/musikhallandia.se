@@ -21,6 +21,4 @@
         @include('partials.content.events-current-grid')
     @endif
 
-    @include('partials.content.newsletter')
-
 @endsection
