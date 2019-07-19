@@ -3,8 +3,8 @@
     @if(isset($myPages) && !empty($myPages['first_page']) && $myPages['first_page']->post_name != 'vad-vi-gor')
         <div class="rh-xpad-A py2 mx-auto" style="max-width: 1440px; background: #EFE7DA;">
             <div class="rh-xpad-B">
-                <nav aria-label="Navigering nivå två" class="flex items-center justify-between mx-auto" style="max-width: 1440px; background: #EFE7DA;">
-                    <ul class="" style="display: inline;">
+                <nav class="flex items-center justify-between mx-auto" style="max-width: 1440px; background: #EFE7DA;">
+                    <ul aria-label="Navigering nivå två" class="" style="display: inline;">
                         @if($myPages['first_page']->active == 1)
                             <li class="mr2" style="display:inline;">
                                 <a class="rh-link--navigation py1" style="border-bottom: 4px solid #FA3CB4;" href="{{ $myPages['first_page']->url }}">{{ $myPages['first_page']->post_title }}</a>
