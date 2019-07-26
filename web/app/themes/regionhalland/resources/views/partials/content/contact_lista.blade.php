@@ -16,7 +16,7 @@
             <li class="pb4" style="display:inline-block">
                 @if($data['contact_has_image'])
                     <div class="mr3" style="text-align:center; overflow: hidden; position: relative; width:400px; height:300px; ">
-                        <img src="{{ $data['contact_image_url'] }}" style="width:400px; height:300px;">
+                        <img src="{{ $data['contact_image_url'] }}" alt="{{ $data['contact_image_alt'] }}" style="width:400px; height:300px;">
                         {{-- Decorative triangles --}}
                         <span style="width:0; height: 0; position: absolute; bottom: 0; left: 0; border-left: 30px solid #FA3CB4; border-top: 80px solid transparent;"></span>
                         <span style="width:0; height: 0; position: absolute; top: 0; right: 0; border-right: 30px solid #FA3CB4; border-bottom: 80px solid transparent;"></span>
