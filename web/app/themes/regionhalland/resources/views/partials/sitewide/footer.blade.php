@@ -32,7 +32,7 @@
             @endif
         @endif
         <div class="left-align col col-12 sm-col-12 md-col-4">
-            <img style="max-width: 100%;" src="{!! env('WP_HOME') !!}/include/img/MH_Greyscale.png" />
+            <img style="max-width: 100%;" alt="" src="{!! env('WP_HOME') !!}/include/img/MH_Greyscale.png" />
             <p style="max-width:15em;">
                 Musik Hallandia är en musikinstitution, helägd av Region Halland.
             </p>
