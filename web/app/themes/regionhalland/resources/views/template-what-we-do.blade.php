@@ -17,7 +17,7 @@
             <div class="mx-auto" style="max-width: 1440px; background: #FBF9F4;">
                 <div class="center px4 pt2 pb3 rh-article">
                     
-                    <main class="clearfix">
+                    <div class="clearfix">
                     
                         @php($myPages = get_region_halland_page_children())
                         @if(isset($myPages))
@@ -40,7 +40,7 @@
                             @endforeach
                         @endif
 
-                    </main>
+                    </div>
                 </div>
             </div>
         </main>
