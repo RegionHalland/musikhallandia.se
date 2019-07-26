@@ -12,7 +12,7 @@
 	@php($myImage = get_region_halland_acf_page_contact_card_image($cid))
 	@if($myImage['has-image'] == 1)
 		<div class="mr3 mx-auto" style="text-align:center; overflow: hidden; position: relative; width:400px; height:300px; ">
-			<img src="{{$myImage['image-url']}}" style="width:400px; height:300px;">
+			<img src="{{$myImage['image-url']}}" alt="{{$myImage['image-alt']}}" style="width:400px; height:300px;">
 			{{-- Decorative triangles --}}
 			<span style="width:0; height: 0; position: absolute; bottom: 0; left: 0; border-left: 30px solid #FA3CB4; border-top: 80px solid transparent;"></span>
 			<span style="width:0; height: 0; position: absolute; top: 0; right: 0; border-right: 30px solid #FA3CB4; border-bottom: 80px solid transparent;"></span>
