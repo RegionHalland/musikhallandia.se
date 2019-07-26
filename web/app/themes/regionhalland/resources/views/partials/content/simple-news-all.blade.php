@@ -17,7 +17,9 @@
 
                         <p>{{$nyhet->description}}</p>
 
-                        <a href="{{$nyhet->link_url}}" target="{{$nyhet->link_target}}">{{$nyhet->link_title}}</a>
+                        @if($nyhet->link_url && $nyhet->link_title)
+                            <a href="{{$nyhet->link_url}}" @if($nyhet->link_target)target="{{$nyhet->link_target}}"@endif>{{$nyhet->link_title}}</a>
+                        @endif
                     </div>
                 </div>
             </li>
