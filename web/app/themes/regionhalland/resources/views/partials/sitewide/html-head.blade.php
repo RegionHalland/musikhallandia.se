@@ -25,7 +25,8 @@
 		<title>{{ $myPostType }} - Musik Hallandia</title>
 	@endif
     <link rel="stylesheet" type="text/css" href="{!! env('WP_HOME') !!}/include/alicdn/font_o5hd5vvqpoqiwwmi_190529.css">
-	<link href="http://styleguide.local/musikhallandia.css" rel="stylesheet"/>
+	<link href="{!! env('WP_HOME') !!}/styleguide5.0.0/css/components.css" rel="stylesheet"/>
+	{{--<link href="http://styleguide.local/musikhallandia.css" rel="stylesheet"/>--}}
 	<link rel="stylesheet" href="{!! env('WP_HOME') !!}/include/style/development.css" type="text/css" media="all" />
 	<script src="{!! env('WP_HOME') !!}/include/scripts/jquery.3.3.1.min.js?ver=3.3.1"></script>
 	<script src="{!! env('WP_HOME') !!}/include/scripts/application.js"></script>
