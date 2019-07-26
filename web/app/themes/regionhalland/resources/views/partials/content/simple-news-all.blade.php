@@ -14,7 +14,7 @@
                     <div class="clearfix">
 
                         @if($nyhet->image_url)
-                            <img class="mr2" src="{{$nyhet->image_url}}" alt="{{$nyhet->image_alt}}" style="width:300px;height:200px; float:left;">
+                            <img class="mr2" src="{{$nyhet->image_url}}" alt="@if($nyhet->image_alt){{$nyhet->image_alt}}@else INGEN ALTTEXT @endif" style="width:300px;height:200px; float:left;">
                         @endif
 
                         <h3 class="h2"><a class="rh-link--navigation" href="./?nid={{$nyhet->ID}}">{{$nyhet->post_title}}</a></h3>
