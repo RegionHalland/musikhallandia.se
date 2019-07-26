@@ -1,9 +1,7 @@
 @php($myNyhet = get_region_halland_get_page_news_simple_single($nid))
 @if($myNyhet)
-    <br>
     <div class="mx-auto" style="max-width:1440px; min-height: 400px; max-height: 420px; background-image: url('{{ get_the_post_thumbnail_url($nid) }}');  height: 50%; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;">
     </div>
-    <main id="main">
         <div class="rh-xpad-A pt3 pb1 mx-auto" style="max-width: 1440px; background: #FBF9F4">
             <div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
                 <div class="">
@@ -34,6 +32,5 @@
             </div>
             <br><br>
         </div>
-    </main>
 
 @endif
