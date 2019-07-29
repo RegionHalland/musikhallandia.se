@@ -6,7 +6,7 @@
                 <div class="col col-12 md-col-6">
                     <div class="m2 p2" style="position: relative; text-align:center; line-height: 7em; background:black;height:9em;">
                         <div style="line-height:1; color: white; position: absolute; top:1em; left:1em;">Vi söker</div>
-                        <a class="h1" href="{!! $myData['link_1'] !!}" style="color:white;">{!! $myData['text_1'] !!}</a>
+                        <a class="h1" href="{!! $myData['link_1'] !!}" style="color:white;" aria-label="Vi söker {!! $myData['text_1'] !!}">{!! $myData['text_1'] !!}</a>
                         <span style="width:0; height: 0; position: absolute; bottom: 0; right: 0; border-right: 30px solid #FA3CB4; border-top: 80px solid transparent;"></span>
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                 <div class="col col-12 md-col-6">
                     <div class="m2 p2" style="position: relative; background:black; line-height:7em; text-align:center; height:9em;">
                         <div style="line-height:1; color: white; position: absolute; top:1em; left:1em;">Vi söker</div>
-                        <a class="h1" href="{!! $myData['link_2'] !!}" style="color:white">{!! $myData['text_2'] !!}</a>
+                        <a class="h1" href="{!! $myData['link_2'] !!}" style="color:white" aria-label="Vi söker {!! $myData['text_2'] !!}">{!! $myData['text_2'] !!}</a>
                         <span style="width:0; height: 0; position: absolute; bottom: 0; right: 0; border-right: 30px solid #FA3CB4; border-top: 80px solid transparent;"></span>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
             <p class="h2 pt3">Sidor</p>
             @php($first_level_pages = get_region_halland_tree_first_level())
             @if(isset($first_level_pages) && !empty($first_level_pages))
-                <ul>
+                <ul aria-label="Sidor i huvudnavigationen">
                     @foreach($first_level_pages as $first_level_page)
                         @if($first_level_page->active === true)
                             <li style="position:relative;">
@@ -71,7 +71,7 @@
         </div>
         <div class="left-align col col-12 sm-col-4 md-col-3">
             <p class="h2 pt3">Om oss</p>
-            <ul>
+            <ul aria-label="Om oss">
                 <li style="position:relative;"><a class="rh-link--navigation" href="/om-oss">Om oss</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em; "></span></li>
                 <li style="position:relative;"><a class="rh-link--navigation" href="/">Vår vision</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
                 <li style="position:relative;"><a class="rh-link--navigation" href="/">Vårt uppdrag</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
