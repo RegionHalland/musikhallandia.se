@@ -10,9 +10,6 @@
 
     @include('partials.content.hero')
     @include('partials.navigation.nav-level2')
-    
-    <main id="main">
-        @include('partials.content.simple-news')
-    </main>
-    
+    @include('partials.content.simple-news')
+
 @endsection

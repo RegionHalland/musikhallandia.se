@@ -13,37 +13,35 @@
 
     {{-- Huvudinnehåll --}}
     @while(have_posts()) @php(the_post())
-        <main id="main">
-            <div class="mx-auto" style="max-width: 1440px; background: #FBF9F4;">
-                <div class="center px4 pt2 pb3 rh-article">
-                    
-                    <div class="clearfix">
-                    
-                        @php($myPages = get_region_halland_page_children())
-                        @if(isset($myPages))
-                            @foreach ($myPages as $myChilds)
-                                <div class="col col-12 sm-col-12 md-col-6 lg-col-4" style="height:350px; overflow: hidden; display: flex; flex-wrap: wrap; justify-content: center;">
-                                    <div class="p1" style="display: block;">
-                                        <img src="{{ $myChilds->image_url }}" style="width:400px; height: 300px;" />
+        <div class="mx-auto" style="max-width: 1440px; background: #FBF9F4;">
+            <div class="center px4 pt2 pb3 rh-article">
 
-                                        <p style="display:block;">
-                                            <strong>
-                                                <a class="rh-link--navigation" href="{{ $myChilds->url }}">
-                                                    {{ $myChilds->post_title }}
-                                                </a>
-                                            </strong>
-                                        </p>
+                <div class="clearfix">
 
-                                    </div>
+                    @php($myPages = get_region_halland_page_children())
+                    @if(isset($myPages))
+                        @foreach ($myPages as $myChilds)
+                            <div class="col col-12 sm-col-12 md-col-6 lg-col-4" style="height:350px; overflow: hidden; display: flex; flex-wrap: wrap; justify-content: center;">
+                                <div class="p1" style="display: block;">
+                                    <img src="{{ $myChilds->image_url }}" style="width:400px; height: 300px;" />
+
+                                    <p style="display:block;">
+                                        <strong>
+                                            <a class="rh-link--navigation" href="{{ $myChilds->url }}">
+                                                {{ $myChilds->post_title }}
+                                            </a>
+                                        </strong>
+                                    </p>
 
                                 </div>
-                            @endforeach
-                        @endif
 
-                    </div>
+                            </div>
+                        @endforeach
+                    @endif
+
                 </div>
             </div>
-        </main>
+        </div>
     @endwhile
 
 @endsection

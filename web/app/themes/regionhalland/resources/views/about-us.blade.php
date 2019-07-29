@@ -15,7 +15,7 @@
     
         <div class="mx-auto" style="max-width: 1440px; background: #FBF9F4;">
             <div class="center px4 pt2 pb3 rh-article clearfix" style="max-width: 1440px;">
-                <main id="main" class="col col-12 md-col-8">
+                <div class="col col-12 md-col-8">
                     <h1>{{ the_title() }}</h1>
                     <p><strong>{{ get_region_halland_acf_page_ingress() }}</strong></p>
                     <p>{!! the_content() !!}</p>
@@ -26,7 +26,7 @@
                         Loggor
                     </div>
 
-                </main>
+                </div>
             </div>
         </div>
 
