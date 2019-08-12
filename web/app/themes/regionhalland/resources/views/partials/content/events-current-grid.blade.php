@@ -1,5 +1,6 @@
 
-<div class="center px3 rh-article" style="background: #FBF9F4; max-width: 1440px;">
+{{-- <div class="center px3 rh-article" style="background: #FBF9F4; max-width: 1440px;"> --}}
+<div class="center rh-article" style="background: #FBF9F4; max-width: 1440px;">
     {{-- Kommenterat bort nedan knappar sålänge --}}
     {{--
     <div class="mx-auto py3" style="text-align: center">

@@ -9,6 +9,9 @@ web/app/themes/regionhalland/.cache-loader/*
 composer.lock
 
 # OS
+.vs
+.vscode
+.idea
 .DS_Store
 
 # Application
@@ -26,3 +29,17 @@ web/wp/*
 # Dotenv
 .env
 .env.*
+
+# Using for front-end development
+node_modules
+package-lock.json
+
+_dev
+.editorconfig
+.eslintignore
+.eslintrc.json
+devenv.config.json
+gulpfile.js
+LICENSE
+package.json
+README.md
