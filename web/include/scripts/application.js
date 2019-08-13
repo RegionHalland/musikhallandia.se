@@ -60,12 +60,13 @@ $(document).ready(function () {
         var menuSpacingAfterPosInfo = getElementTopById($menuSpacingAfter),
             menuSpacingAfterOffset = $menuSpacingAfter.height() * -1;
 
+        // Scroll up
         if (menuCurrentPosition < menuLastPosition) {
             if (!isMenuActive) {
                 $menuDropDownHeader.removeClass("rh-menu-dropdown__header--minimize");
                 isMenuActive = !isMenuActive;
             }
-        }
+        } // Scroll down
         else if (menuCurrentPosition > menuLastPosition) {
             if (isMenuActive &&
                 menuPosInfo.isOverViewport &&
