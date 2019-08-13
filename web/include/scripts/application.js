@@ -50,6 +50,7 @@ $(document).ready(function () {
             changeToFixedPosition(true);
         } else {
             changeToFixedPosition(false, function () {
+                $menuDropDown.css({ "top": 0 });
                 $("body").hasClass("rh-noscroll") && $("body").removeClass("rh-noscroll");
             });
         }
@@ -156,10 +157,18 @@ $(document).ready(function () {
     }
 
     function lockBodyScrolling(status, fnCallback) {
+        // bodyScrollLock exported from the library Body scroll block (//github.com/willmcpo/body-scroll-lock)
+        var disableBodyScroll = bodyScrollLock.disableBodyScroll;
+        var clearAllBodyScrollLocks = bodyScrollLock.clearAllBodyScrollLocks;
+        
         if (status) {
+            var targetElement = document.querySelector(".rh-menu-dropdown");
+            
             $("body").addClass("rh-noscroll");
+            disableBodyScroll(targetElement);
         } else {
             $("body").removeClass("rh-noscroll");
+            clearAllBodyScrollLocks();
         }
 
         typeof fnCallback === 'function' && fnCallback();
