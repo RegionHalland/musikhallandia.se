@@ -47,11 +47,14 @@ $(document).ready(function () {
         var menuPosInfo = getElementTopById($menuDropDownAnchorId);
 
         if (menuPosInfo.isOverViewport) {
-            changeToFixedPosition(true);
+            changeToFixedPosition(true, function(){
+                $menuDropDownHeader.addClass("rh-menu-dropdown__header--shadow");
+            });
         } else {
             changeToFixedPosition(false, function () {
                 $menuDropDown.css({ "top": 0 });
                 $("body").hasClass("rh-noscroll") && $("body").removeClass("rh-noscroll");
+                $menuDropDownHeader.removeClass("rh-menu-dropdown__header--shadow");
             });
         }
 

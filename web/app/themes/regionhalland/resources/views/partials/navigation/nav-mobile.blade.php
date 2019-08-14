@@ -3,8 +3,12 @@
 <div class="rh-menu-dropdown rh-display-only-sm">
     {{-- Menu header --}}
     <div class="rh-menu-dropdown__header">
-        <img class="rh-menu-dropdown__header-logo" src="{!! env('WP_HOME') !!}/include/img/MH_Greyscale.png" alt="">
-        <div tabindex="1" class="rh-round-button rh-menu-dropdown__menu-round-button">
+        {{-- <img class="rh-menu-dropdown__header-logo" src="{!! env('WP_HOME') !!}/include/img/MH_Greyscale.png"> --}}
+        <a href="{!! env('WP_HOME') !!}">
+            <img class="rh-menu-dropdown__header-logo" src="{!! env('WP_HOME') !!}/include/img/MH_Greyscale.png">
+        </a>
+        
+        <div class="rh-round-button rh-menu-dropdown__menu-round-button">
             <span class="icon-menu rh-menu-dropdown__icon-menu"></span>
         </div>
     </div>
@@ -70,7 +74,7 @@
         {{-- Menu footer --}}
         <div>
             <div class="rh-menu-dropdown__item rh-menu-dropdown__footer">
-                <a tabindex="16" href="#" class="rh-link--navigation rh-menu-dropdown__text">In English</a>
+                <a tabindex="16" href="#" class="rh-link--navigation rh-menu-dropdown__text rh-menu-dropdown__footer-text">In English</a>
             </div>
         </div>
     </div>{{-- End of menu's body' --}}
