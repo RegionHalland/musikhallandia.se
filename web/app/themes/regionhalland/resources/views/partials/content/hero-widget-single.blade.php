@@ -12,7 +12,7 @@
                     @if(isset($myData->stad))
                         {{ $myData->stad }}
                     @endif
-                    @if(isset($myData->date))
+                    @if(isset($myData->speltid_datum))
                         {{ $myData->speltid_datum }}
                     @endif
                 </span>
