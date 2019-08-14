@@ -4,7 +4,8 @@
 
     @include('partials.content.hero-widget-single')
 
-    <div class="rh-xpad-A pt3 pb3" style="background: #FBF9F4">
+    {{-- <div class="rh-xpad-A pt3 pb3" style="background: #FBF9F4;"> --}}
+    <div class="rh-xpad-A pt3 pb3" style="background: #FBF9F4; max-width:1440px;margin:auto;">
         <div class="rh-xpad-B mx-auto" style="max-width: 1440px;">
             <div class="clearfix">
                 <div class="col col-12 md-col-9 rh-article">
