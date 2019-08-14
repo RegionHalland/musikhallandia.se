@@ -118,14 +118,16 @@ strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       background-color: #ffffff;
       color: #FA3CB4; }
   
-/* Mobile dropdown menu */
+/* Mobile dropdown menu - Displays only in SM mode - <= 768px*/
 .rh-menu-dropdown {
     /* Positionering */
     position: relative;
     top: 0;
     z-index: 30;
     width: 100%;
-    min-width: 20em; }
+    min-width: 20em;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; }
     .rh-menu-dropdown__header {
       height: 5em;
       overflow: hidden;
@@ -324,6 +326,4 @@ strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     overflow: hidden;
     -webkit-overflow-scrolling: auto;
     height: 100% !important; }
-    
-    
   
