@@ -21,10 +21,12 @@
                     <p>{!! the_content() !!}</p>
 
                     {{-- Box med loggor för samarbetspartners --}}
-                    <h2>Vi samarbetar med</h2>
+                    {{-- 
+                        <h2>Vi samarbetar med</h2>
                     <div class="p3" style="background: #EDEDED;">
                         Loggor
                     </div>
+                    --}}
 
                 </div>
             </div>

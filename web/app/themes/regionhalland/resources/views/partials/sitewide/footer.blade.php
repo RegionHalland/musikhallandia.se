@@ -1,4 +1,5 @@
 <div class="mx-auto clearfix center px3 pb3 pt2" style="background-color: #EFE7DA; line-height: 1.4; max-width: 1440px;">
+    @if(1==2)
     @if(function_exists('get_region_halland_theme_links'))
         @php($myData = get_region_halland_theme_links())
         @if(!empty($myData['link_1']) and !empty($myData['text_1']))
@@ -30,21 +31,18 @@
             </div>
         @endif
     @endif
+    @endif
     <div class="left-align col col-12 sm-col-12 md-col-4">
         <img style="max-width: 100%;" alt="" src="{!! env('WP_HOME') !!}/include/img/MH_Greyscale.png" />
         <p style="max-width:15em;">
             Musik Hallandia är en musikinstitution, helägd av Region Halland.
         </p>
         <p>
-            <a class="rh-link--navigation" href="">Facebook</a>
+            <a class="rh-link--navigation" href="https://www.facebook.com/musikhallandia">Facebook</a>
         </p>
         <p>
-            <a class="rh-link--navigation" href="">Instagram</a>
+            <a class="rh-link--navigation" href="https://www.instagram.com/musikhallandia/">Instagram (@musikhallandia)</a>
         </p>
-        <p>
-            <a class="rh-link--navigation" href="">E-post</a>
-        </p>
-
     </div>
 
     <div class="left-align col col-12 sm-col-4 md-col-2">
@@ -69,20 +67,22 @@
         @endif
     </div>
     <div class="left-align col col-12 sm-col-4 md-col-3">
-        <p class="h2 pt3">Om oss</p>
-        <ul aria-label="Om oss">
-            <li style="position:relative;"><a class="rh-link--navigation" href="/om-oss">Om oss</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em; "></span></li>
-            <li style="position:relative;"><a class="rh-link--navigation" href="/">Vår vision</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
-            <li style="position:relative;"><a class="rh-link--navigation" href="/">Vårt uppdrag</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
-            <li style="position:relative;"><a class="rh-link--navigation" href="/">Lediga jobb</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
-            <li style="position:relative;"><a class="rh-link--navigation" href="/">Kontakt</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
-            <li style="position:relative;"><a class="rh-link--navigation" href="/">Press & Media</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;position:absolute; left:7em;"></span></li>
-        </ul>
-    </div>
+        <p class="h2 pt3">
+            Kontakt
+        </p>
+        <p>
+            <strong>Telefon:</strong> 035 - 13 48 00<br>
+            <strong>Fax:</strong> 035 - 13 54 44<br>
+            <strong>Epost:</strong> <a href="mailto:info@musikhallandia.se" class="rh-link--navigation">info@musikhallandia.se</a>
+        </p>
+        <p>
+            <a class="rh-link--navigation" href="{!! env('WP_HOME') !!}/om-oss/kontakt/">Kontakta personalen</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;"></span>
+        </p>
+  </div>
 
     <div class="left-align col col-12 sm-col-4 md-col-3">
         <p class="h2 pt3">
-            Kontakt
+            Adress
         </p>
         <p>
             <strong>Besöksadress:</strong><br>
@@ -96,13 +96,5 @@
             Kultur i Halland<br>
             Box 517, 301 80 Halmstad<br>
         </p>
-        <p>
-            <strong>Telefon:</strong> 035 - 13 48 00<br>
-            <strong>Fax:</strong> 035 - 13 54 44
-        </p>
-        <p>
-            <a class="rh-link--navigation" href="">Kontakta personalen</a><span class="ml1 icon-arrow-right" style="font-family: feather !important;"></span>
-        </p>
-
     </div>
 </div>
