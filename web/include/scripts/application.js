@@ -34,6 +34,10 @@ $(document).ready(function () {
         menuDelayTime = 30,
         isMinimize = false;
 
+    var onloadScreenSize = $(document).width(),
+        maxScreenSizeForDisplaying = 767,// 767px
+        isMobileMenuOpened = onloadScreenSize <= maxScreenSizeForDisplaying;
+
     // Menu's element definitions
     var $menuDropDownAnchorId = $("#menu-dropdown-anchor"),
         $menuSpacingAfter = $(".rh-menu-dropdown__spacing-after"),
@@ -48,50 +52,62 @@ $(document).ready(function () {
     $menuDropDownSubContainers.addClass("rh-display--none");
     $menuSubItemIcons.toggleClass("icon-minus icon-plus");
 
+    // Check screen size
+    $(window).resize(function () {
+        if ($(document).width() <= maxScreenSizeForDisplaying) {
+            isMobileMenuOpened = true;
+        } else {
+            isMobileMenuOpened = false;
+        }
+    });
+
     // EventListener for the menu
     $(window).scroll(function () {
-        // Determine the menu's type (fixed or relative)
-        var menuPosInfo = getElementTopById($menuDropDownAnchorId);
+        if (isMobileMenuOpened) {
+            // Determine the menu's type (fixed or relative)
+            var menuPosInfo = getElementTopById($menuDropDownAnchorId);
 
-        if (menuPosInfo.isOverViewport) {
-            changeToFixedPosition(true, function () {
-                $menuDropDownHeader.addClass("rh-menu-dropdown__header--shadow");
-            });
-        } else {
-            changeToFixedPosition(false, function () {
-                $menuDropDown.css({ "top": 0 });
-                $menuDropDownHeader.removeClass("rh-menu-dropdown__header--shadow");
-            });
-        }
-
-        // Minimize the menu when scrolling down/up for a better user experience
-        var menuCurrentPosition = $(this).scrollTop(),
-            menuSpacingAfterPosInfo = getElementTopById($menuSpacingAfter),
-            menuOffset = $menuSpacingAfter.height() * -1;
-
-
-        // Scroll up
-        if (menuCurrentPosition < menuLastPosition) {
-            if (isMinimize) {
-                delayNow(function () {
-                    $menuDropDownHeader.removeClass("rh-menu-dropdown__header--minimize");
-                    isMinimize = !isMinimize;
-                }, menuDelayTime);
+            if (menuPosInfo.isOverViewport) {
+                changeToFixedPosition(true, function () {
+                    $menuDropDownHeader.addClass("rh-menu-dropdown__header--shadow");
+                });
+            } else {
+                changeToFixedPosition(false, function () {
+                    $menuDropDown.css({ "top": 0 });
+                    $menuDropDownHeader.removeClass("rh-menu-dropdown__header--shadow");
+                });
             }
-        } // Scroll down
-        else if (menuCurrentPosition > menuLastPosition) {
-            if (!isMinimize &&
-                menuPosInfo.isOverViewport &&
-                menuSpacingAfterPosInfo.viewportTop <= menuOffset) {
 
-                delayNow(function () {
-                    $menuDropDownHeader.addClass("rh-menu-dropdown__header--minimize");
-                    isMinimize = !isMinimize;
-                }, menuDelayTime);
+            // Minimize the menu when scrolling down/up for a better user experience
+            var menuCurrentPosition = $(this).scrollTop(),
+                menuSpacingAfterPosInfo = getElementTopById($menuSpacingAfter),
+                menuOffset = $menuSpacingAfter.height() * -1;
+
+
+            // Scroll up
+            if (menuCurrentPosition < menuLastPosition) {
+                if (isMinimize) {
+                    delayNow(function () {
+                        $menuDropDownHeader.removeClass("rh-menu-dropdown__header--minimize");
+                        isMinimize = !isMinimize;
+                    }, menuDelayTime);
+                }
+            } // Scroll down
+            else if (menuCurrentPosition > menuLastPosition) {
+                if (!isMinimize &&
+                    menuPosInfo.isOverViewport &&
+                    menuSpacingAfterPosInfo.viewportTop <= menuOffset) {
+
+                    delayNow(function () {
+                        $menuDropDownHeader.addClass("rh-menu-dropdown__header--minimize");
+                        isMinimize = !isMinimize;
+                    }, menuDelayTime);
+                }
             }
-        }
 
-        menuLastPosition = menuCurrentPosition;
+            menuLastPosition = menuCurrentPosition;
+
+        }
     });
 
     // Main menu button
