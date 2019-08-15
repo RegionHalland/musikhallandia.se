@@ -32,6 +32,7 @@ web/wp/*
 
 # Using for front-end development
 node_modules
+package.json
 package-lock.json
 
 _dev
@@ -40,6 +41,3 @@ _dev
 .eslintrc.json
 devenv.config.json
 gulpfile.js
-LICENSE
-package.json
-README.md
