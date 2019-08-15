@@ -43,6 +43,9 @@
         <p>
             <a class="rh-link--navigation" href="https://www.instagram.com/musikhallandia/">Instagram (@musikhallandia)</a>
         </p>
+        <p class="pt2 pl1">
+            <img style="max-width: 100%;" alt="" src="{!! env('WP_HOME') !!}/include/img/Huvudlogotyp-med-devis-svart.png" />
+        </p>
     </div>
 
     <div class="left-align col col-12 sm-col-4 md-col-2">
