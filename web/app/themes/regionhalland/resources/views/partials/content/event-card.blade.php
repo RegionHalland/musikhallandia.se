@@ -11,7 +11,7 @@
                     <img src="{{$data->puff_url}}" width="{{$data->puff_width}}"  alt="{{ $data->puff_alt }}" height="{{$data->puff_height}}">
                     <span style="padding:1em; border-top-right-radius:10px; border-bottom-right-radius: 10px; color: white; background:black; position:absolute; bottom:2em; left:1.5em; ">{{ $data->speltid_datum }}</span>
                 </div>
-                <div class="pl2 pb3">
+                <div class="pl2 pb3" style="height:5em;">
                     <strong><a class="rh-link--navigation" href="{{ $data->url }}">{{ $data->post_title }}</a></strong><br>
                     {{ $data->ingress }}
                 </div>
