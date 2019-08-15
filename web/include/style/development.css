@@ -161,7 +161,7 @@ strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         font-weight: bold; }
     .rh-menu-dropdown__icon-menu {
       display: block;
-      margin: 0.6em 0 0 0; }
+      margin: 0.5625em 0 0 0; }
     .rh-menu-dropdown__icon-item {
       display: block;
       margin: 0.05em 1.875em 0 0.03125em; }
@@ -326,4 +326,3 @@ strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     overflow: hidden;
     -webkit-overflow-scrolling: auto;
     height: 100% !important; }
-  

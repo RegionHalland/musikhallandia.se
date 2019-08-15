@@ -25,6 +25,15 @@ $(function() {
 
 /* Mobile dropdown menu */
 $(document).ready(function () {
+    // Global variables
+    var gbTimer; // Global timer is using for menu delaying
+
+    var scrollbarWidth = calculateScrollbarWidth(),
+        isMenuPositionTypeFixed = false,
+        menuLastPosition = 0,
+        menuDelayTime = 30,
+        isMinimize = false;
+
     // Menu's element definitions
     var $menuDropDownAnchorId = $("#menu-dropdown-anchor"),
         $menuSpacingAfter = $(".rh-menu-dropdown__spacing-after"),
@@ -40,43 +49,45 @@ $(document).ready(function () {
     $menuSubItemIcons.toggleClass("icon-minus icon-plus");
 
     // EventListener for the menu
-    var menuLastPosition = 0;
-    var isMenuActive = true; // false: hide - true: show - Using for a better performance
     $(window).scroll(function () {
         // Determine the menu's type (fixed or relative)
         var menuPosInfo = getElementTopById($menuDropDownAnchorId);
 
         if (menuPosInfo.isOverViewport) {
-            changeToFixedPosition(true, function(){
+            changeToFixedPosition(true, function () {
                 $menuDropDownHeader.addClass("rh-menu-dropdown__header--shadow");
             });
         } else {
             changeToFixedPosition(false, function () {
                 $menuDropDown.css({ "top": 0 });
-                $("body").hasClass("rh-noscroll") && $("body").removeClass("rh-noscroll");
                 $menuDropDownHeader.removeClass("rh-menu-dropdown__header--shadow");
             });
         }
 
         // Minimize the menu when scrolling down/up for a better user experience
-        var menuCurrentPosition = $(this).scrollTop();
-        var menuSpacingAfterPosInfo = getElementTopById($menuSpacingAfter),
-            menuSpacingAfterOffset = $menuSpacingAfter.height() * -1;
+        var menuCurrentPosition = $(this).scrollTop(),
+            menuSpacingAfterPosInfo = getElementTopById($menuSpacingAfter),
+            menuOffset = $menuSpacingAfter.height() * -1;
+
 
         // Scroll up
         if (menuCurrentPosition < menuLastPosition) {
-            if (!isMenuActive) {
-                $menuDropDownHeader.removeClass("rh-menu-dropdown__header--minimize");
-                isMenuActive = !isMenuActive;
+            if (isMinimize) {
+                delayNow(function () {
+                    $menuDropDownHeader.removeClass("rh-menu-dropdown__header--minimize");
+                    isMinimize = !isMinimize;
+                }, menuDelayTime);
             }
         } // Scroll down
         else if (menuCurrentPosition > menuLastPosition) {
-            if (isMenuActive &&
+            if (!isMinimize &&
                 menuPosInfo.isOverViewport &&
-                menuSpacingAfterPosInfo.viewportTop <= menuSpacingAfterOffset) {
+                menuSpacingAfterPosInfo.viewportTop <= menuOffset) {
 
-                $menuDropDownHeader.addClass("rh-menu-dropdown__header--minimize");
-                isMenuActive = !isMenuActive;
+                delayNow(function () {
+                    $menuDropDownHeader.addClass("rh-menu-dropdown__header--minimize");
+                    isMinimize = !isMinimize;
+                }, menuDelayTime);
             }
         }
 
@@ -97,7 +108,7 @@ $(document).ready(function () {
         var menuCurrentPosInfo = getElementTopById($menuDropDownAnchorId);
         if ($menuDropDownBody.is(":visible")) { // Menu is opened
             if (menuCurrentPosInfo.isOverViewport) {
-                lockBodyScrolling(true, makeMarginOffset(true));
+                lockBodyScrolling(true, makeScrollBarOffset(true));
             } else { // Menu is on top
                 //-> Change position from "relative" to "fixed" by add fixed-class
                 var topPos = menuCurrentPosInfo.bodyTop ?
@@ -106,18 +117,18 @@ $(document).ready(function () {
 
                 changeToFixedPosition(true, function () {
                     $menuDropDown.css({ "top": topPos });
-                    lockBodyScrolling(true, makeMarginOffset(true));
+                    lockBodyScrolling(true, makeScrollBarOffset(true));
                 });
             }
 
         } else { // Menu is closed - Reset all to default
             if (menuCurrentPosInfo.isOverViewport) {
-                lockBodyScrolling(false, makeMarginOffset(false));
+                lockBodyScrolling(false, makeScrollBarOffset(false));
             } else { // Menu is on top
                 //-> Change back position from "fixed" to "relative" by remove fixed-class
                 changeToFixedPosition(false, function () {
                     $menuDropDown.css({ "top": 0 });
-                    lockBodyScrolling(false, makeMarginOffset(false));
+                    lockBodyScrolling(false, makeScrollBarOffset(false));
                 });
             }
         }
@@ -149,42 +160,59 @@ $(document).ready(function () {
 
     /* Common functions */
     function changeToFixedPosition(status, fnCallback) {
-        if (status) {
+        var done = false;
+
+        if (status && !isMenuPositionTypeFixed) {
             $menuDropDown.addClass("rh-position-fixed");
             $menuSpacingAfter.addClass("rh-menu-dropdown__spacing-after--active");
-        } else {
+            isMenuPositionTypeFixed = !isMenuPositionTypeFixed;
+
+            done = true;
+
+        } else if (!status && isMenuPositionTypeFixed) {
             $menuDropDown.removeClass("rh-position-fixed");
             $menuSpacingAfter.removeClass("rh-menu-dropdown__spacing-after--active");
+            isMenuPositionTypeFixed = !isMenuPositionTypeFixed;
+
+            done = true;
         }
 
-        typeof fnCallback === 'function' && fnCallback();
+        done && typeof fnCallback === 'function' && fnCallback();
     }
 
     function lockBodyScrolling(status, fnCallback) {
         // bodyScrollLock exported from the library Body scroll block (//github.com/willmcpo/body-scroll-lock)
-        var disableBodyScroll = bodyScrollLock.disableBodyScroll;
-        var clearAllBodyScrollLocks = bodyScrollLock.clearAllBodyScrollLocks;
-        
+        var disableBodyScroll = bodyScrollLock.disableBodyScroll,
+            enableBodyScroll = bodyScrollLock.enableBodyScroll;
+
+        var targetElement = document.querySelector(".rh-menu-dropdown");
+
         if (status) {
-            var targetElement = document.querySelector(".rh-menu-dropdown");
-            
             $("body").addClass("rh-noscroll");
             disableBodyScroll(targetElement);
+
         } else {
             $("body").removeClass("rh-noscroll");
-            clearAllBodyScrollLocks();
+            enableBodyScroll(targetElement);
         }
 
         typeof fnCallback === 'function' && fnCallback();
     }
 
-    function makeMarginOffset(status) {
-        var scrollbarWidth = calculateScrollbarWidth();
-
+    function makeScrollBarOffset(status) {
         if (status) {
-            $("body").css({ "margin-right": scrollbarWidth });
+            $("body").css({ "padding-right": scrollbarWidth });
         } else {
-            $("body").css({ "margin-right": 0 }); // Reset to default
+            $("body").css({ "padding-right": "" }); // Reset to default
+        }
+    }
+
+    function delayNow(fnCallback, millisecond) {
+        // Using gbTimer variable on global
+        if (gbTimer) clearTimeout(gbTimer);
+
+        if (typeof fnCallback === 'function') {
+            gbTimer = setTimeout(fnCallback, millisecond);
         }
     }
 
