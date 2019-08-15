@@ -12,6 +12,11 @@
                             </div>
                             <h2>{{ $blurbs['post_title'] }}</h2>
                             {{ $blurbs['post_content'] }}
+
+                            @if($blurbs['link_url'])
+                                <p><br><a href="{{ $blurbs['link_url'] }}">{!! $blurbs['link_title'] !!}</a></p>
+                            @endif
+
                         </div>
                     </li>
                 @endforeach
