@@ -23,21 +23,21 @@ Du bör nu kunna nå Wordpress webbinstallerare från din sajts URL. Om du har e
 # Egna region-halland-plugins som används (för övriga: se composer.json i roten)
 
 ```sh
-    
-    "regionhalland/region-halland-acf-add-theme-subpage": "1.0.0",
-    "regionhalland/region-halland-acf-cookie-notice": "1.0.0",
-    "regionhalland/region-halland-acf-page-education-repeater": "1.4.0",
-    "regionhalland/region-halland-main-post-settings-vuxhalland": "1.0.1",
-    "regionhalland/region-halland-breadcrumbs-pages": "1.1.1",
-    "regionhalland/region-halland-find-on-page": "1.1.0",
-    "regionhalland/region-halland-prepare-the-content": "1.0.0",
-    "regionhalland/region-halland-single-page-information": "1.0.0",
-    "regionhalland/region-halland-tree-first-level": "1.1.0",
-    "regionhalland/region-halland-acf-page-links-blurbs": "1.4.2",
-    "regionhalland/region-halland-page-children": "1.1.0",
-    "regionhalland/region-halland-parent-page": "1.0.0",
-    "regionhalland/region-halland-acf-page-menu-text": "1.0.0",
-    "regionhalland/region-halland-acf-pro-5-6-8": "5.6.8"
+    "regionhalland/region-halland-acf-add-theme-subpage": "1.3.2",
+    "regionhalland/region-halland-acf-cookie-notice": "1.3.2",
+    "regionhalland/region-halland-breadcrumbs-pages": "1.2.0",
+    "regionhalland/region-halland-single-page-information": "1.1.0",
+    "regionhalland/region-halland-tree-first-level": "1.4.0",
+    "regionhalland/region-halland-page-children": "1.3.0",
+    "regionhalland/region-halland-parent-page": "1.1.0",
+    "regionhalland/region-halland-acf-page-evenemang": "2.8.0",
+    "regionhalland/region-halland-acf-page-ingress": "1.3.0",
+    "regionhalland/region-halland-acf-page-contact-card": "1.6.0",
+    "regionhalland/region-halland-tree-first-second-level-child-pages": "1.0.0",
+    "regionhalland/region-halland-acf-page-links-blurbs": "1.7.0",
+    "regionhalland/region-halland-acf-theme-links": "1.1.0",
+    "regionhalland/region-halland-acf-page-news-simple": "1.5.0",
+    "regionhalland/region-halland-tree-all-levels-musik-hallandia": "1.1.0"
   ```
     
 ## Versionshistorik
