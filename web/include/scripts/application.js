@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     var onloadScreenSize = $(document).width(),
         maxScreenSizeForDisplaying = 767,// 767px
-        isMobileMenuOpened = onloadScreenSize <= maxScreenSizeForDisplaying;
+        isMobileScreen = onloadScreenSize <= maxScreenSizeForDisplaying;
 
     // Menu's element definitions
     var $menuDropDownAnchorId = $("#menu-dropdown-anchor"),
@@ -54,16 +54,22 @@ $(document).ready(function () {
 
     // Check screen size
     $(window).resize(function () {
+        scrollbarWidth = calculateScrollbarWidth();
+        
         if ($(document).width() <= maxScreenSizeForDisplaying) {
-            isMobileMenuOpened = true;
+            if (!isMobileScreen){
+                isMobileScreen = true;
+            }
         } else {
-            isMobileMenuOpened = false;
+            if (isMobileScreen){
+                isMobileScreen = false;
+            }
         }
     });
 
     // EventListener for the menu
     $(window).scroll(function () {
-        if (isMobileMenuOpened) {
+        if (isMobileScreen) {
             // Determine the menu's type (fixed or relative)
             var menuPosInfo = getElementTopById($menuDropDownAnchorId);
 
@@ -217,9 +223,9 @@ $(document).ready(function () {
 
     function makeScrollBarOffset(status) {
         if (status) {
-            $("body").css({ "padding-right": scrollbarWidth });
+            $("body").css({ "margin-right": scrollbarWidth });
         } else {
-            $("body").css({ "padding-right": "" }); // Reset to default
+            $("body").css({ "margin-right": "" }); // Reset to default
         }
     }
 

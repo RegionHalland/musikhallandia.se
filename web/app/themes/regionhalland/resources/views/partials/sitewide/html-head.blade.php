@@ -30,7 +30,7 @@
 	<link rel="stylesheet" href="{!! env('WP_HOME') !!}/include/style/development.css" type="text/css" media="all" />
 	<script src="{!! env('WP_HOME') !!}/include/scripts/jquery.3.3.1.min.js?ver=3.3.1"></script>
 	<script src="{!! env('WP_HOME') !!}/include/scripts/bodyScrollLock-2.6.4.js"></script>
-	<script src="{!! env('WP_HOME') !!}/include/scripts/application.js"></script>
+    <script src="{!! env('WP_HOME') !!}/include/scripts/application.js"></script>
 
 	<!--
 		/**
