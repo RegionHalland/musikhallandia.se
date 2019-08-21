@@ -26,12 +26,9 @@ $(function() {
 /* Mobile dropdown menu */
 $(document).ready(function () {
     // Global variables
-    var gbTimer; // Global timer is using for menu delaying
-
     var scrollbarWidth = calculateScrollbarWidth(),
         isMenuPositionTypeFixed = false,
         menuLastPosition = 0,
-        menuDelayTime = 30,
         isMinimize = false;
 
     var onloadScreenSize = $(document).width(),
@@ -39,7 +36,8 @@ $(document).ready(function () {
         isMobileScreen = onloadScreenSize <= maxScreenSizeForDisplaying;
 
     // Menu's element definitions
-    var $menuDropDownAnchorId = $("#menu-dropdown-anchor"),
+    var $body = $("body"),
+        $menuDropDownAnchorId = $("#menu-dropdown-anchor"),
         $menuSpacingAfter = $(".rh-menu-dropdown__spacing-after"),
         $menuDropDown = $(".rh-menu-dropdown"),
         $menuDropDownHeader = $(".rh-menu-dropdown__header"),
@@ -55,20 +53,20 @@ $(document).ready(function () {
     // Check screen size
     $(window).resize(function () {
         scrollbarWidth = calculateScrollbarWidth();
-        
+
         if ($(document).width() <= maxScreenSizeForDisplaying) {
-            if (!isMobileScreen){
+            if (!isMobileScreen) {
                 isMobileScreen = true;
             }
         } else {
-            if (isMobileScreen){
+            if (isMobileScreen) {
                 isMobileScreen = false;
             }
         }
     });
 
     // EventListener for the menu
-    $(window).scroll(function () {
+    $(document).scroll(throttle(function () {
         if (isMobileScreen) {
             // Determine the menu's type (fixed or relative)
             var menuPosInfo = getElementTopById($menuDropDownAnchorId);
@@ -89,14 +87,12 @@ $(document).ready(function () {
                 menuSpacingAfterPosInfo = getElementTopById($menuSpacingAfter),
                 menuOffset = $menuSpacingAfter.height() * -1;
 
-
             // Scroll up
             if (menuCurrentPosition < menuLastPosition) {
                 if (isMinimize) {
-                    delayNow(function () {
-                        $menuDropDownHeader.removeClass("rh-menu-dropdown__header--minimize");
-                        isMinimize = !isMinimize;
-                    }, menuDelayTime);
+
+                    $menuDropDownHeader.removeClass("rh-menu-dropdown__header--minimize");
+                    isMinimize = !isMinimize;
                 }
             } // Scroll down
             else if (menuCurrentPosition > menuLastPosition) {
@@ -104,17 +100,14 @@ $(document).ready(function () {
                     menuPosInfo.isOverViewport &&
                     menuSpacingAfterPosInfo.viewportTop <= menuOffset) {
 
-                    delayNow(function () {
-                        $menuDropDownHeader.addClass("rh-menu-dropdown__header--minimize");
-                        isMinimize = !isMinimize;
-                    }, menuDelayTime);
+                    $menuDropDownHeader.addClass("rh-menu-dropdown__header--minimize");
+                    isMinimize = !isMinimize;
                 }
             }
 
             menuLastPosition = menuCurrentPosition;
-
         }
-    });
+    }, 150));
 
     // Main menu button
     $(".rh-menu-dropdown__menu-round-button").click(function () {
@@ -135,7 +128,7 @@ $(document).ready(function () {
                 //-> Change position from "relative" to "fixed" by add fixed-class
                 var topPos = menuCurrentPosInfo.bodyTop ?
                     menuCurrentPosInfo.viewportTop : // Offset for above elements
-                    menuCurrentPosInfo.onTop;
+                    menuCurrentPosInfo.fromTop;
 
                 changeToFixedPosition(true, function () {
                     $menuDropDown.css({ "top": topPos });
@@ -203,19 +196,18 @@ $(document).ready(function () {
     }
 
     function lockBodyScrolling(status, fnCallback) {
-        // bodyScrollLock exported from the library Body scroll block (//github.com/willmcpo/body-scroll-lock)
+        //github.com/willmcpo/body-scroll-lock
         var disableBodyScroll = bodyScrollLock.disableBodyScroll,
             enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
         var targetElement = document.querySelector(".rh-menu-dropdown");
 
         if (status) {
-            $("body").addClass("rh-noscroll");
-            disableBodyScroll(targetElement);
-
+            $body.addClass("rh-noscroll");
+            isMobileDevice() && disableBodyScroll(targetElement);
         } else {
-            $("body").removeClass("rh-noscroll");
-            enableBodyScroll(targetElement);
+            $body.removeClass("rh-noscroll");
+            isMobileDevice() && enableBodyScroll(targetElement);
         }
 
         typeof fnCallback === 'function' && fnCallback();
@@ -223,18 +215,9 @@ $(document).ready(function () {
 
     function makeScrollBarOffset(status) {
         if (status) {
-            $("body").css({ "margin-right": scrollbarWidth });
+            $body.css({ "margin-right": scrollbarWidth });
         } else {
-            $("body").css({ "margin-right": "" }); // Reset to default
-        }
-    }
-
-    function delayNow(fnCallback, millisecond) {
-        // Using gbTimer variable on global
-        if (gbTimer) clearTimeout(gbTimer);
-
-        if (typeof fnCallback === 'function') {
-            gbTimer = setTimeout(fnCallback, millisecond);
+            $body.css({ "margin-right": "" }); // Reset to default
         }
     }
 
@@ -251,7 +234,7 @@ $(document).ready(function () {
 
         return {
             bodyTop: bodyTop,
-            onTop: elementTop,
+            fromTop: elementTop,
             viewportTop: viewportTop,
             isOverViewport: isOverViewportTop
         };
@@ -260,4 +243,39 @@ $(document).ready(function () {
     function calculateScrollbarWidth() {
         return (window.innerWidth - $(document).width());
     }
+
+    function isMobileDevice(){
+        return !!navigator.platform && /iPad|iPhone|iPod/g.test(navigator.platform);
+    }
+    
+    // ************************************
+    // *** Javascript throttle function ***
+    // ************************************
+    //$('body').on('mousemove', throttle(function (event) {
+    //console.log('tick');
+    //}, 1000));
+    // https://remysharp.com/2010/07/21/throttling-function-calls
+    function throttle(fn, threshhold, scope) {
+        threshhold || (threshhold = 250);
+        var last,
+            deferTimer;
+        return function () {
+            var context = scope || this;
+    
+            var now = +new Date,
+                args = arguments;
+            if (last && now < last + threshhold) {
+                // hold on to it
+                clearTimeout(deferTimer);
+                deferTimer = setTimeout(function () {
+                    last = now;
+                    fn.apply(context, args);
+                }, threshhold);
+            } else {
+                last = now;
+                fn.apply(context, args);
+            }
+        };
+    }
 });
+
