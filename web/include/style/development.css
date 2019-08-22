@@ -118,8 +118,8 @@ strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       background-color: #ffffff;
       color: #FA3CB4; }
   
-  /* Mobile dropdown menu - Displays only in SM mode - <= 768px*/
-  .rh-menu-dropdown {
+/* Mobile dropdown menu - Displays only in SM mode - <= 768px*/
+.rh-menu-dropdown {
     /* Positionering */
     position: relative;
     top: 0;
@@ -240,7 +240,6 @@ strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
           display: none; } }
     .rh-menu-dropdown--open {
       overflow-y: scroll;
-      overscroll-behavior: contain;
       right: 0;
       bottom: 0;
       left: 0;
@@ -261,9 +260,6 @@ strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   
   .rh-display--none {
     display: none; }
-  
-  .rh-display--hide {
-    display: hidden; }
   
   .rh-pl-05 {
     padding-left: 0.3125em; }
@@ -328,5 +324,5 @@ strong, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   .rh-noscroll {
     overflow: hidden;
     -webkit-overflow-scrolling: auto;
-    height: 100% !important; }
+    height: 100%; }
   

@@ -5,8 +5,8 @@
     <div class="rh-menu-dropdown__header">
         {{-- <img class="rh-menu-dropdown__header-logo" src="{!! env('WP_HOME') !!}/include/img/MH_Greyscale.png"> --}}
         <div class="rh-menu-dropdown__header-logo-container">
-            <a href="{!! env('WP_HOME') !!}">
-                <img class="rh-menu-dropdown__header-logo" src="{!! env('WP_HOME') !!}/include/img/MH_Greyscale.png">
+            <a href="{!! env('WP_HOME') !!}" aria-label="Gå till startsida">
+                <img class="rh-menu-dropdown__header-logo" src="{!! env('WP_HOME') !!}/include/img/MH_Greyscale.png" alt="Region Hallands logotyp">
             </a>
         </div>
         
