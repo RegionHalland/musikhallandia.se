@@ -41,7 +41,7 @@
             <a class="rh-link--navigation" href="https://www.facebook.com/musikhallandia">Facebook</a>
         </p>
         <p>
-            <a class="rh-link--navigation" href="https://www.instagram.com/musikhallandia/">Instagram (@musikhallandia)</a>
+            <a class="rh-link--navigation" href="https://www.instagram.com/musik.hallandia/">Instagram (@musikhallandia)</a>
         </p>
         <p class="pt2 pl1">
             <img style="max-width: 100%;" alt="" src="{!! env('WP_HOME') !!}/include/img/Huvudlogotyp-med-devis-svart.png" />
