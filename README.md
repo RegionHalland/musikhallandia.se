@@ -42,6 +42,9 @@ Du bör nu kunna nå Wordpress webbinstallerare från din sajts URL. Om du har e
     
 ## Versionshistorik
 
+### 1.2.0 
+- Cache-control via headers
+
 ### 1.1.0 
 - Tillgänglighetsförbättringar
 - Lagt till Facebook Pixel
